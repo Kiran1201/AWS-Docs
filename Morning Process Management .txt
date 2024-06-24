@@ -1,0 +1,13 @@
+Process Management 
+---------------------
+
+Any Program that is in execution stage is termed as a process.
+
+Every Process must be executed by the user.
+
+
+How can we manage the process ? 
+
+1. ps  --> Static View
+2. pstree --> Static View
+3. top ---> Dynamic View

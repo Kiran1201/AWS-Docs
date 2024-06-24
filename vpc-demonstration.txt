@@ -1,0 +1,160 @@
+#**VPC practical (Imp) (virtual)
+   # Intro :-
+      1. it is virtualized , isolated.
+      2. aws s3, dynamo not used VPC , but all services are used vpc
+      3. secure network on cloud by working on amazon vpc.
+      4. VPC also known as logical data center
+      5. every region contain default VPC
+      6. whenever we create vpc , automatically 2 things created
+         1. NACL --> network acess control list
+         2. Main route table: in main route in route option Ip shown and also target show loca
+
+    # Create VPC :-
+      step 1: go to services --> choose networking ---> choose vpc 
+      step 2: click on your VPCs or click on create vpc
+      step 3: for now we choose VPC only
+      step 4: enter any name
+      step 5: choose ipv4 CIDR manual input if you know ip address otherwise choose IPAM- allocated IPV4 CIDR block
+      step 6: enter ip address
+      step 7: choose ipv6 if required
+      step 8: choose default tanancy 
+              Note: default tenency is shared.
+                    dedicated tenency menas hardware specific for you. it is expensive and not cover in free tier.
+      step 9: click on create
+    
+    # to verify NACL, Main route table
+      step 1: left hand side in VPC (virtual private cloud) option, click on Route tables
+      step 2: if There is 2 Route table, 1 for default and 2nd for your created VPC
+      step 3: select route table and in details option if VPC show as default means this main route table for default
+      step 4: select route table and in details option if VPC not show as means this main route table for your VPC
+      step 5: if there is created main route table for your VPC, means they verify vpc created successfully.
+      step 6: left hand side go to security option, select Network ACLs
+      step 7: similary there is 1 default NACL and other for our created VPC
+      step 8: select NACL and in details option if in VPC ID there is default shown means this is for default VPC
+      step 9: select NACL and in details option if in VPC ID there is not default shown means this is for our VPC
+  
+    # subnets
+      to secure network we create 2 (any numbers of subnet we can created) networks
+      1. public network: access on internet. access by anyone
+      2. private network: access not on internet.
+
+      **Note: whenever we create subnet, it's automatic connected to main route table
+
+    # to create subnets
+      step 1: left hand side in VPC (virtual private cloud) option, click on subnets
+      step 2: click on create subnet
+      step 3: choose vpc ip
+      step 4: enter subnet name (like public)
+      step 5: if you want choose AZ 
+      step 6: enter Ipv4 subnet ip  (for example 10.0.2.0/24, choose any reporting values from CIDR (ip addressing)) 
+      step 7: enter tag if you want
+      step 8: follow step 4 to step 7 again to create other subnet for same vpc 
+      step 9: click on create
+
+   # to verify, whenever we create subnet, it's automatic connected to main route table
+     step 1: left hand side in VPC (virtual private cloud) option, click on Route tables
+     step 2: select vpc main route table
+     step 3: go to subnet associations  option
+     step 4: In Subnets without explicit associations option, you can see subnet name and ip and any more things
+     step 5: if you can see your subnet details in vpc main route table, means succesffully 
+   
+   **router responsibility to give direction and if there is not correct path so its responsed. 
+
+   # create public and private route table
+     step 1: left hand side in VPC (virtual private cloud) option, click on Route tables
+     step 2: click on create route table
+     step 3: enter route name, select VPC and click on create
+     step 4: follow all steps again to create private route
+
+   # connect public subnet to public route table: it automatically disconnected from main route table
+     step 1: left hand side in VPC (virtual private cloud) option, click on Route tables
+     step 2: select public route
+     step 3: click on subnet assosiation
+     step 4: click on edit subnet assosiation
+     step 5: add public subnet
+
+   ** Note: to allow internet on public subnet we used gateway. internet gateway is always connect with VPC. expensive service. paid.
+   ** 1 internet gateway = 1 VPC
+   
+    # to create a internet gateway
+      step 1: left hand side in VPC (virtual private cloud) option, click on internet gateway
+      step 2: click on create a gateway
+      step 3: enter name of IG
+      step 4: add tag if you want
+      step 5: click on create
+      step 6: after successfully creation check status --> ditached
+      step 7: to attach with VPC, select internet gateway and click on action
+      step 8: click on attach and add VPC
+      step 9: select internet ip: 0.0.0.0/0 (anywhere)
+    
+    # to connect public route and VPC 
+      step 1: left hand side in VPC (virtual private cloud) option, click on Route tables
+      step 2: select public route
+      step 3: go to route option --> click on edit
+      step 4: click on add route
+      step 5: add ip 0.0.0.0/0, and choose internet gateway (igw (gateway ip automatic come))
+      step 6: click on save changes
+   
+    # optional --> to enable automatic ipv4 address
+       step 1: click on subnet
+       step 2: select public subnet
+       step 3: click on action
+       step 4: enable auto assign public ipv4 address
+
+    ** nacl --> sbnet level firewall ----> stateless firewall ------> inbound
+    ** ec2 (SG) ----> instance level firewall  ---> statefull firewall ----> outbund
+    
+    # to check network for created VPC
+      1. for public subnet, create ec2 instance:
+         step 1: follow all normal steps to create ec2 linux server
+         step 2: update network setting:
+                 1. choose create VPC
+                 2. choose public subnet
+                 3. allow ICmP - ipv4 protocol for security group
+ 
+         **Note: command ping for ICMP protocol (internet control message protocol) --> no port number ----> layer 3 (n/w) ---> trobleshoot n/w issue
+                 to connect with multiple computer we used ICMP.
+                 how its work: if computer 'A' comunicate with computer 'B' so computer A send the icmp echo request and computer B wants to connect they return response.
+         
+         step 3: check access over the internet, open command promt
+         step 4: enter command, ping public_ipv4_address
+         step 5: if we get the response means everything correct
+         step 6: now check on server
+         step 7: connect with linux server
+         step 8: enter the command, ping -c 4 google.com
+                 Note: -c: if we don't write -c its give unlimited response
+                        4: choose any number
+
+       2. for private subnet, create ec2 instance:
+          step 1: follow all normal steps to create ec2 linux server
+          step 2: update network setting:
+                 1. choose create VPC
+                 2. choose private subnet
+                 3. auto assign disable --> for enable there is charges
+                 3. allow ICMP - ipv4 protocol for security group
+          step 3: follow all steps same as public subnet, internt connection check
+          step 4: but for private subnet, we did not recive response over the network 
+          step 5: for internal connection to access private subnet we used internal domain network
+
+          **Note: bastian host:- public subnet to private subnet
+          **Note: for private subnet we communicate internally or on our server we can not communicate with outside over internet server
+          **Note: for internal connection we create ssh connection
+          
+          step 6: copy the key from key_pair.pem file 
+          step 7: open the linux server which connected to public subnet
+          step 8: enter the command, vi key.pem --> paste key ---> save the file
+          step 9: check the permission of key.pem file. enter command, ls -l
+          step 10: change permission to r------, enter the command , chmod 400 key.pem
+          step 11: ssh -i key.pem ec2-user@private (ip  identify for password)
+      
+      # now close the connection
+        step 1: terminate ec2 instances
+        step 2: go to subnets and delete
+        step 3: go to routes and delete public route (main route automatic deleted when vpc deleted)
+        step 4: delete internet gateway (first detached vpc)
+        step 5: delete vpc
+
+# task for today
+  repeat practice
+  create 3 public and 2 priivate and each will have two ec2 instances.
+  check internet connection, internal communication

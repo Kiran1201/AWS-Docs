@@ -1,0 +1,46 @@
+OSI (Open System Interconnect) Model 
+------------------------------------------
+
+It is a reference model not an implemented model. 
+
+
+We Have 7 Layers of OSI 
+---------------------------
+
+1. Application Layer  ( Layer 7 )
+2. Presentation Layer ( Layer 6 )
+3. Session Layer   ( Layer 5 )
+4. Transport Layer ( Layer 4 )
+5. Network Layer   ( Layer 3 )
+6. Data Link Layer ( Layer 2 )
+7. Physical Layer  ( Layer 1 )
+
+**NOTE:- The Layers are written in the order of Sender to receiver . 
+
+-----------------------------
+1. Application Layer :- We interact with the application and provide data . Eg:- http,https,ftp etc.
+
+2. Presentation Layer :- It is going to compress the data as well as encrypt the data for security. 
+
+3. Session Layer :- It helps to maintain the connection with the server . It also is responsible to develop and maintain checkpoints while downloading data from the network. It is done with the help of cookies. 
+
+4. Transport Layer :- To Perform End to End Communication we use Transport Layer . It is going to use port numbers in order to get end to end communication.
+
+		FTP --> 20,21
+                ssh ----> 22
+		Telnet ---> 23
+		SMTP --> 25
+		DNS --> 53
+		DHCP --> 67,68
+		http --> 80
+		NetBIOS --> 135,139
+            	https --> 443
+		SMB --> 445
+		MySQL --> 3306
+		RDP --> 3389 
+
+5. Network Layer :- Here the Logical Address ( IP Address ) is used . All the routing activities will also take place here.
+
+6. Data Link Layer :- It's Responsibility is to ensure the data corruption does not take place. It will be done with the help of CRC ( Cyclic Redundancy Check) check .
+
+7. Physical Layer :- All the Networking wires are involved here.

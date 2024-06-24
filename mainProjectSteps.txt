@@ -1,0 +1,41 @@
+
+Main Project 
+
+# task: create a high level architecture load balancer and instance, 
+integrated with application load balancer with autoscalling and deploy amazon website, netflix
+
+
+step1: Using default VPC or creating new VPC with internet gate way and public subnets and router.
+
+step2: Launching EC2-instance and hosting amazon.com in main directory(/var/www/html/index.html) and
+deploying neflix in netflix directory(/var/www/html/netflix/index.html), started the server.
+(check IP successfully deployed in browser)
+
+step3: Creating one coustom AMI with created ec2-instance and created lunch templete with coustom AMI.
+(check terminating existing instance and lunch new instance with created templete and check in the browser with IP)
+
+step4: Creating simple notfication service with email subscription.
+
+step5: Creating security group allowing http port:80.
+
+step6: Creating target groups for amazon(/index.html) and netfilx(health check path (/netflix/index.html)) targets.
+
+step7: Creating Load balancer allowing http:80 and defalut target as amazon target group.
+(check DNS Name in the browser the default amazon server is running).
+
+step8: Adding one more rule for http:80 port in same load balancer with path (/netflix/), priority 1.
+(check the browser DNS name with /netflix/ and verfiy netflix server running)
+
+step9: Creating Auto scaling with my created lunch templete and my application load balancer, with creating scalin alaram with confighurations 
+(my cpu utlization thershold value comedown into 15% removing instance) and scal-out alaram for it crosses 30% adding instance, and atteching them.
+
+ste10: Test by incresing cpu utilization incressing above 30% and verify in the browser up and running.
+
+
+My doubts:-
+
+1. sir here I am creating and deploying amazon and netflix both on same insatce here what is the purpose of using ALB.
+
+2. In Auto scalling i am creating alarams for scall-in and scall-out and adding theshold value, when ever cpu utilization reaches my instances adding removing operation will happen,
+while creating target groups i used to create first instance and added in application load balancer, here scall-in or scall-out alarams my instance remove and add, how ALB dynomicall
+asigned with newly automatically created instances.  

@@ -1,0 +1,358 @@
+login as: ec2-user
+Authenticating with public key "imported-openssh-key"
+Register this system with Red Hat Insights: insights-client --register
+Create an account or view all your systems at https://red.ht/insights-dashboard
+[ec2-user@ip-172-31-19-184 ~]$ man ls
+[ec2-user@ip-172-31-19-184 ~]$ cat > file1.txt
+Hey Everyone
+[ec2-user@ip-172-31-19-184 ~]$ cat > file2.txt
+Bye Everyone
+[ec2-user@ip-172-31-19-184 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-19-184 ~]$ ls /home/ec2-user
+file1.txt  file2.txt
+[ec2-user@ip-172-31-19-184 ~]$ ls
+file1.txt  file2.txt
+[ec2-user@ip-172-31-19-184 ~]$ ls /tmp
+systemd-private-0838f4f3da2142a49e825754b914328c-chronyd.service-ebKdFu
+systemd-private-0838f4f3da2142a49e825754b914328c-dbus-broker.service-dgaa9N
+systemd-private-0838f4f3da2142a49e825754b914328c-kdump.service-iTzhyQ
+systemd-private-0838f4f3da2142a49e825754b914328c-systemd-logind.service-FUHwPH
+[ec2-user@ip-172-31-19-184 ~]$ ls /proc
+1     15   25  35    3987  429  454  54   576  647  acpi        diskstats      ioports      loadavg       partitions     sysvipc
+10    16   26  36    3988  43   455  549  577  657  bootconfig  dma            irq          locks         schedstat      thread-self
+1013  17   27  37    4     430  456  55   578  685  buddyinfo   driver         kallsyms     mdstat        scsi           timer_list
+1017  18   29  38    40    431  457  56   58   69   bus         dynamic_debug  kcore        meminfo       self           tty
+1018  19   3   39    4032  432  458  57   59   701  cgroups     execdomains    keys         misc          slabinfo       uptime
+1019  195  30  3966  4065  449  48   570  6    702  cmdline     fb             key-users    modules       softirqs       version
+12    2    31  3967  4070  450  49   572  606  8    consoles    filesystems    kmsg         mounts        stat           vmallocinfo
+13    20   32  3977  41    451  5    573  61   81   cpuinfo     fs             kpagecgroup  mtrr          swaps          vmstat
+1314  22   33  3978  42    452  53   574  639  9    crypto      interrupts     kpagecount   net           sys            xen
+14    24   34  3980  428   453  532  575  643  950  devices     iomem          kpageflags   pagetypeinfo  sysrq-trigger  zoneinfo
+[ec2-user@ip-172-31-19-184 ~]$
+[ec2-user@ip-172-31-19-184 ~]$ ls
+file1.txt  file2.txt
+[ec2-user@ip-172-31-19-184 ~]$ ls /tmp
+systemd-private-0838f4f3da2142a49e825754b914328c-chronyd.service-ebKdFu
+systemd-private-0838f4f3da2142a49e825754b914328c-dbus-broker.service-dgaa9N
+systemd-private-0838f4f3da2142a49e825754b914328c-kdump.service-iTzhyQ
+systemd-private-0838f4f3da2142a49e825754b914328c-systemd-logind.service-FUHwPH
+[ec2-user@ip-172-31-19-184 ~]$ ls /proc
+1     15   25  35    3988  429  454  54   576  647  acpi        diskstats      ioports      loadavg       partitions     sysvipc
+10    16   26  36    4     43   455  549  577  657  bootconfig  dma            irq          locks         schedstat      thread-self
+1013  17   27  37    40    430  456  55   578  685  buddyinfo   driver         kallsyms     mdstat        scsi           timer_list
+1017  18   29  38    4032  431  457  56   58   69   bus         dynamic_debug  kcore        meminfo       self           tty
+1018  19   3   39    4065  432  458  57   59   701  cgroups     execdomains    keys         misc          slabinfo       uptime
+1019  195  30  3967  4077  449  48   570  6    702  cmdline     fb             key-users    modules       softirqs       version
+12    2    31  3977  4099  450  49   572  606  8    consoles    filesystems    kmsg         mounts        stat           vmallocinfo
+13    20   32  3978  41    451  5    573  61   81   cpuinfo     fs             kpagecgroup  mtrr          swaps          vmstat
+1314  22   33  3980  42    452  53   574  639  9    crypto      interrupts     kpagecount   net           sys            xen
+14    24   34  3987  428   453  532  575  643  950  devices     iomem          kpageflags   pagetypeinfo  sysrq-trigger  zoneinfo
+[ec2-user@ip-172-31-19-184 ~]$ ls /home/ec2-user
+file1.txt  file2.txt
+[ec2-user@ip-172-31-19-184 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-19-184 ~]$ ls
+file1.txt  file2.txt
+[ec2-user@ip-172-31-19-184 ~]$ cd /tmp
+[ec2-user@ip-172-31-19-184 tmp]$ pwd
+/tmp
+[ec2-user@ip-172-31-19-184 tmp]$ ls
+systemd-private-0838f4f3da2142a49e825754b914328c-chronyd.service-ebKdFu
+systemd-private-0838f4f3da2142a49e825754b914328c-dbus-broker.service-dgaa9N
+systemd-private-0838f4f3da2142a49e825754b914328c-kdump.service-iTzhyQ
+systemd-private-0838f4f3da2142a49e825754b914328c-systemd-logind.service-FUHwPH
+[ec2-user@ip-172-31-19-184 tmp]$
+[ec2-user@ip-172-31-19-184 tmp]$ cd
+[ec2-user@ip-172-31-19-184 ~]$
+[ec2-user@ip-172-31-19-184 ~]$ man ls
+[ec2-user@ip-172-31-19-184 ~]$ ls -l
+total 8
+-rw-r--r--. 1 ec2-user ec2-user 13 May  3 05:00 file1.txt
+-rw-r--r--. 1 ec2-user ec2-user 13 May  3 05:00 file2.txt
+[ec2-user@ip-172-31-19-184 ~]$ ls -l /tmp
+total 0
+drwx------. 3 root root 17 May  3 04:34 systemd-private-0838f4f3da2142a49e825754b914328c-chronyd.service-ebKdFu
+drwx------. 3 root root 17 May  3 04:34 systemd-private-0838f4f3da2142a49e825754b914328c-dbus-broker.service-dgaa9N
+drwx------. 3 root root 17 May  3 04:34 systemd-private-0838f4f3da2142a49e825754b914328c-kdump.service-iTzhyQ
+drwx------. 3 root root 17 May  3 04:34 systemd-private-0838f4f3da2142a49e825754b914328c-systemd-logind.service-FUHwPH
+[ec2-user@ip-172-31-19-184 ~]$ man ls
+[ec2-user@ip-172-31-19-184 ~]$ ls -lrt
+total 8
+-rw-r--r--. 1 ec2-user ec2-user 13 May  3 05:00 file1.txt
+-rw-r--r--. 1 ec2-user ec2-user 13 May  3 05:00 file2.txt
+[ec2-user@ip-172-31-19-184 ~]$ ls -l
+total 8
+-rw-r--r--. 1 ec2-user ec2-user 13 May  3 05:00 file1.txt
+-rw-r--r--. 1 ec2-user ec2-user 13 May  3 05:00 file2.txt
+[ec2-user@ip-172-31-19-184 ~]$
+[ec2-user@ip-172-31-19-184 ~]$ cat > myfile.txt
+.
+[ec2-user@ip-172-31-19-184 ~]$ man touch
+[ec2-user@ip-172-31-19-184 ~]$ ls
+file1.txt  file2.txt  myfile.txt
+[ec2-user@ip-172-31-19-184 ~]$ ls -l
+total 12
+-rw-r--r--. 1 ec2-user ec2-user 13 May  3 05:00 file1.txt
+-rw-r--r--. 1 ec2-user ec2-user 13 May  3 05:00 file2.txt
+-rw-r--r--. 1 ec2-user ec2-user  2 May  3 05:11 myfile.txt
+[ec2-user@ip-172-31-19-184 ~]$ touch file1.txt
+[ec2-user@ip-172-31-19-184 ~]$ ls -l
+total 12
+-rw-r--r--. 1 ec2-user ec2-user 13 May  3 05:12 file1.txt
+-rw-r--r--. 1 ec2-user ec2-user 13 May  3 05:00 file2.txt
+-rw-r--r--. 1 ec2-user ec2-user  2 May  3 05:11 myfile.txt
+[ec2-user@ip-172-31-19-184 ~]$ touch kaushik.txt
+[ec2-user@ip-172-31-19-184 ~]$ ls -l
+total 12
+-rw-r--r--. 1 ec2-user ec2-user 13 May  3 05:12 file1.txt
+-rw-r--r--. 1 ec2-user ec2-user 13 May  3 05:00 file2.txt
+-rw-r--r--. 1 ec2-user ec2-user  0 May  3 05:12 kaushik.txt
+-rw-r--r--. 1 ec2-user ec2-user  2 May  3 05:11 myfile.txt
+[ec2-user@ip-172-31-19-184 ~]$ touch doubt.daksh
+[ec2-user@ip-172-31-19-184 ~]$
+[ec2-user@ip-172-31-19-184 ~]$ man mkdir
+[ec2-user@ip-172-31-19-184 ~]$ mkdir myfirstdirectory
+[ec2-user@ip-172-31-19-184 ~]$ ls
+doubt.daksh  file1.txt  file2.txt  kaushik.txt  myfile.txt  myfirstdirectory
+[ec2-user@ip-172-31-19-184 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-19-184 ~]$ cd myfirstdirectory
+[ec2-user@ip-172-31-19-184 myfirstdirectory]$ pwd
+/home/ec2-user/myfirstdirectory
+[ec2-user@ip-172-31-19-184 myfirstdirectory]$ mkdir dir1
+[ec2-user@ip-172-31-19-184 myfirstdirectory]$ mkdir dir2  dir3
+[ec2-user@ip-172-31-19-184 myfirstdirectory]$ ls
+dir1  dir2  dir3
+[ec2-user@ip-172-31-19-184 myfirstdirectory]$ touch myfile.txt
+[ec2-user@ip-172-31-19-184 myfirstdirectory]$ ls
+dir1  dir2  dir3  myfile.txt
+[ec2-user@ip-172-31-19-184 myfirstdirectory]$ pwd
+/home/ec2-user/myfirstdirectory
+[ec2-user@ip-172-31-19-184 myfirstdirectory]$ cd dir2
+[ec2-user@ip-172-31-19-184 dir2]$ pwd
+/home/ec2-user/myfirstdirectory/dir2
+[ec2-user@ip-172-31-19-184 dir2]$ touch finallyhappy.txt
+[ec2-user@ip-172-31-19-184 dir2]$ ls
+finallyhappy.txt
+[ec2-user@ip-172-31-19-184 dir2]$ pwd
+/home/ec2-user/myfirstdirectory/dir2
+[ec2-user@ip-172-31-19-184 dir2]$ cd ..
+[ec2-user@ip-172-31-19-184 myfirstdirectory]$ pwd
+/home/ec2-user/myfirstdirectory
+[ec2-user@ip-172-31-19-184 myfirstdirectory]$ cd ..
+[ec2-user@ip-172-31-19-184 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-19-184 ~]$ ls
+doubt.daksh  file1.txt  file2.txt  kaushik.txt  myfile.txt  myfirstdirectory
+[ec2-user@ip-172-31-19-184 ~]$ ls myfirstdirectory
+dir1  dir2  dir3  myfile.txt
+[ec2-user@ip-172-31-19-184 ~]$ cd myfirstdirectory/dir2
+[ec2-user@ip-172-31-19-184 dir2]$ ls
+finallyhappy.txt
+[ec2-user@ip-172-31-19-184 dir2]$ pwd
+/home/ec2-user/myfirstdirectory/dir2
+[ec2-user@ip-172-31-19-184 dir2]$ cd ../..
+[ec2-user@ip-172-31-19-184 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-19-184 ~]$
+[ec2-user@ip-172-31-19-184 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-19-184 ~]$ ls
+doubt.daksh  file1.txt  file2.txt  kaushik.txt  myfile.txt  myfirstdirectory
+[ec2-user@ip-172-31-19-184 ~]$
+[ec2-user@ip-172-31-19-184 ~]$ mkdir whitehat
+[ec2-user@ip-172-31-19-184 ~]$ ls
+doubt.daksh  file1.txt  file2.txt  kaushik.txt  myfile.txt  myfirstdirectory  whitehat
+[ec2-user@ip-172-31-19-184 ~]$ cd whitehat
+[ec2-user@ip-172-31-19-184 whitehat]$ touch hacker.txt
+[ec2-user@ip-172-31-19-184 whitehat]$ mkdir oggy
+[ec2-user@ip-172-31-19-184 whitehat]$ ls
+hacker.txt  oggy
+[ec2-user@ip-172-31-19-184 whitehat]$ pwd
+/home/ec2-user/whitehat
+[ec2-user@ip-172-31-19-184 whitehat]$ cd oggy
+[ec2-user@ip-172-31-19-184 oggy]$ pwd
+/home/ec2-user/whitehat/oggy
+[ec2-user@ip-172-31-19-184 oggy]$ touch kochikame.txt
+[ec2-user@ip-172-31-19-184 oggy]$ ls
+kochikame.txt
+[ec2-user@ip-172-31-19-184 oggy]$ pwd
+/home/ec2-user/whitehat/oggy
+[ec2-user@ip-172-31-19-184 oggy]$ cd ../..
+[ec2-user@ip-172-31-19-184 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-19-184 ~]$ ls
+doubt.daksh  file1.txt  file2.txt  kaushik.txt  myfile.txt  myfirstdirectory  whitehat
+[ec2-user@ip-172-31-19-184 ~]$ mkdir blackhat
+[ec2-user@ip-172-31-19-184 ~]$ cd blackhat
+[ec2-user@ip-172-31-19-184 blackhat]$ mkdir jacker taylor
+[ec2-user@ip-172-31-19-184 blackhat]$ ls
+jacker  taylor
+[ec2-user@ip-172-31-19-184 blackhat]$ pwd
+/home/ec2-user/blackhat
+[ec2-user@ip-172-31-19-184 blackhat]$ cd jacker
+[ec2-user@ip-172-31-19-184 jacker]$ touch taker.txt
+[ec2-user@ip-172-31-19-184 jacker]$ ls
+taker.txt
+[ec2-user@ip-172-31-19-184 jacker]$ pwd
+/home/ec2-user/blackhat/jacker
+[ec2-user@ip-172-31-19-184 jacker]$ cd ..
+[ec2-user@ip-172-31-19-184 blackhat]$ pwd
+/home/ec2-user/blackhat
+[ec2-user@ip-172-31-19-184 blackhat]$ ls
+jacker  taylor
+[ec2-user@ip-172-31-19-184 blackhat]$ cd taylor
+[ec2-user@ip-172-31-19-184 taylor]$ touch joker.txt
+[ec2-user@ip-172-31-19-184 taylor]$ mkdir swift
+[ec2-user@ip-172-31-19-184 taylor]$ pwd
+/home/ec2-user/blackhat/taylor
+[ec2-user@ip-172-31-19-184 taylor]$ cd ../..
+[ec2-user@ip-172-31-19-184 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-19-184 ~]$ ls
+blackhat  doubt.daksh  file1.txt  file2.txt  kaushik.txt  myfile.txt  myfirstdirectory  whitehat
+[ec2-user@ip-172-31-19-184 ~]$ ls -R whitehat  blackhat
+blackhat:
+jacker  taylor
+
+blackhat/jacker:
+taker.txt
+
+blackhat/taylor:
+joker.txt  swift
+
+blackhat/taylor/swift:
+
+whitehat:
+hacker.txt  oggy
+
+whitehat/oggy:
+kochikame.txt
+[ec2-user@ip-172-31-19-184 ~]$ mkdir adarsh.directory
+[ec2-user@ip-172-31-19-184 ~]$ ls
+adarsh.directory  blackhat  doubt.daksh  file1.txt  file2.txt  kaushik.txt  myfile.txt  myfirstdirectory  whitehat
+[ec2-user@ip-172-31-19-184 ~]$ rm -r *
+[ec2-user@ip-172-31-19-184 ~]$
+[ec2-user@ip-172-31-19-184 ~]$ ls
+[ec2-user@ip-172-31-19-184 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-19-184 ~]$ mkdir blackhat
+[ec2-user@ip-172-31-19-184 ~]$ ls
+blackhat
+[ec2-user@ip-172-31-19-184 ~]$ cd blackhat
+[ec2-user@ip-172-31-19-184 blackhat]$ pwd
+/home/ec2-user/blackhat
+[ec2-user@ip-172-31-19-184 blackhat]$ mkdir jacker
+[ec2-user@ip-172-31-19-184 blackhat]$ mkdir taylor
+[ec2-user@ip-172-31-19-184 blackhat]$ ls
+jacker  taylor
+[ec2-user@ip-172-31-19-184 blackhat]$ cd taylor
+[ec2-user@ip-172-31-19-184 taylor]$ pwd
+/home/ec2-user/blackhat/taylor
+[ec2-user@ip-172-31-19-184 taylor]$ mkdir swift
+[ec2-user@ip-172-31-19-184 taylor]$ touch joker.txt
+[ec2-user@ip-172-31-19-184 taylor]$ pwd
+/home/ec2-user/blackhat/taylor
+[ec2-user@ip-172-31-19-184 taylor]$ pwd
+/home/ec2-user/blackhat/taylor
+[ec2-user@ip-172-31-19-184 taylor]$ cd ..
+[ec2-user@ip-172-31-19-184 blackhat]$ pwd
+/home/ec2-user/blackhat
+[ec2-user@ip-172-31-19-184 blackhat]$ ls
+jacker  taylor
+[ec2-user@ip-172-31-19-184 blackhat]$ cd jacker
+[ec2-user@ip-172-31-19-184 jacker]$ touch taker.txt
+[ec2-user@ip-172-31-19-184 jacker]$ pwd
+/home/ec2-user/blackhat/jacker
+[ec2-user@ip-172-31-19-184 jacker]$ cd ../..
+[ec2-user@ip-172-31-19-184 ~]$
+[ec2-user@ip-172-31-19-184 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-19-184 ~]$ ls
+blackhat
+[ec2-user@ip-172-31-19-184 ~]$ mkdir whitehat
+[ec2-user@ip-172-31-19-184 ~]$ ls
+blackhat  whitehat
+[ec2-user@ip-172-31-19-184 ~]$ cd whitehat
+[ec2-user@ip-172-31-19-184 whitehat]$ touch hacker.txt
+[ec2-user@ip-172-31-19-184 whitehat]$ mkdir oggy
+[ec2-user@ip-172-31-19-184 whitehat]$ ls
+hacker.txt  oggy
+[ec2-user@ip-172-31-19-184 whitehat]$ cd oggy
+[ec2-user@ip-172-31-19-184 oggy]$ touch kochikame.txt
+[ec2-user@ip-172-31-19-184 oggy]$ pwd
+/home/ec2-user/whitehat/oggy
+[ec2-user@ip-172-31-19-184 oggy]$ cd ../..
+[ec2-user@ip-172-31-19-184 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-19-184 ~]$ ls
+blackhat  whitehat
+[ec2-user@ip-172-31-19-184 ~]$ ls -R whitehat blackhat
+blackhat:
+jacker  taylor
+
+blackhat/jacker:
+taker.txt
+
+blackhat/taylor:
+joker.txt  swift
+
+blackhat/taylor/swift:
+
+whitehat:
+hacker.txt  oggy
+
+whitehat/oggy:
+kochikame.txt
+[ec2-user@ip-172-31-19-184 ~]$ ls -R
+.:
+blackhat  whitehat
+
+./blackhat:
+jacker  taylor
+
+./blackhat/jacker:
+taker.txt
+
+./blackhat/taylor:
+joker.txt  swift
+
+./blackhat/taylor/swift:
+
+./whitehat:
+hacker.txt  oggy
+
+./whitehat/oggy:
+kochikame.txt
+[ec2-user@ip-172-31-19-184 ~]$ mkdir -p  pavan/hahahah
+[ec2-user@ip-172-31-19-184 ~]$ ls -R
+.:
+blackhat  pavan  whitehat
+
+./blackhat:
+jacker  taylor
+
+./blackhat/jacker:
+taker.txt
+
+./blackhat/taylor:
+joker.txt  swift
+
+./blackhat/taylor/swift:
+
+./pavan:
+hahahah
+
+./pavan/hahahah:
+
+./whitehat:
+hacker.txt  oggy
+
+./whitehat/oggy:
+kochikame.txt
+[ec2-user@ip-172-31-19-184 ~]$ man mkdir
+[ec2-user@ip-172-31-19-184 ~]$
+[ec2-user@ip-172-31-19-184 ~]$ rm -r *
+[ec2-user@ip-172-31-19-184 ~]$
+

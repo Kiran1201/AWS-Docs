@@ -1,0 +1,621 @@
+Using username "ec2-user".
+Authenticating with public key "imported-openssh-key"
+Register this system with Red Hat Insights: insights-client --register
+Create an account or view all your systems at https://red.ht/insights-dashboard
+[ec2-user@ip-172-31-30-119 ~]$ man useradd
+[ec2-user@ip-172-31-30-119 ~]$ sudo useradd prasiddh
+[ec2-user@ip-172-31-30-119 ~]$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:65534:65534:Kernel Overflow User:/:/sbin/nologin
+systemd-coredump:x:999:997:systemd Core Dumper:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+polkitd:x:998:996:User for polkitd:/:/sbin/nologin
+tss:x:59:59:Account used for TPM access:/:/sbin/nologin
+sssd:x:997:994:User for sssd:/:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/usr/share/empty.sshd:/sbin/nologin
+chrony:x:996:993:chrony system user:/var/lib/chrony:/sbin/nologin
+systemd-oom:x:991:991:systemd Userspace OOM Killer:/:/usr/sbin/nologin
+ec2-user:x:1000:1000:Cloud User:/home/ec2-user:/bin/bash
+prasiddh:x:1001:1001::/home/prasiddh:/bin/bash
+[ec2-user@ip-172-31-30-119 ~]$ sudo su - prasiddh
+[prasiddh@ip-172-31-30-119 ~]$ whoami
+prasiddh
+[prasiddh@ip-172-31-30-119 ~]$ pwd
+/home/prasiddh
+[prasiddh@ip-172-31-30-119 ~]$ sudo useradd lalal
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+[sudo] password for prasiddh:
+Sorry, try again.
+[sudo] password for prasiddh:
+sudo: 1 incorrect password attempt
+[prasiddh@ip-172-31-30-119 ~]$
+[prasiddh@ip-172-31-30-119 ~]$ exit
+logout
+[ec2-user@ip-172-31-30-119 ~]$ whoami
+ec2-user
+[ec2-user@ip-172-31-30-119 ~]$ sudo passwd  prasiddh
+Changing password for user prasiddh.
+New password:
+BAD PASSWORD: The password fails the dictionary check - it is too simplistic/systematic
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[ec2-user@ip-172-31-30-119 ~]$ visudo
+visudo: /etc/sudoers: Permission denied
+[ec2-user@ip-172-31-30-119 ~]$ sudo visudo
+visudo: /etc/sudoers.tmp unchanged
+[ec2-user@ip-172-31-30-119 ~]$ vi /etc/sudo
+sudo.conf       sudoers         sudoers.d/      sudo-ldap.conf
+[ec2-user@ip-172-31-30-119 ~]$ vi /etc/sudo
+sudo.conf       sudoers         sudoers.d/      sudo-ldap.conf
+[ec2-user@ip-172-31-30-119 ~]$ vi /etc/sudoers
+[ec2-user@ip-172-31-30-119 ~]$ sudo vi /etc/sudoers
+[ec2-user@ip-172-31-30-119 ~]$ su - prasiddh
+Password:
+Last login: Wed May  8 04:57:13 UTC 2024 on pts/0
+[prasiddh@ip-172-31-30-119 ~]$ whoami
+prasiddh
+[prasiddh@ip-172-31-30-119 ~]$ pwd
+/home/prasiddh
+[prasiddh@ip-172-31-30-119 ~]$ exit
+logout
+[ec2-user@ip-172-31-30-119 ~]$ cd /etc
+[ec2-user@ip-172-31-30-119 etc]$ sudo grep "ec2-user"
+^C
+[ec2-user@ip-172-31-30-119 etc]$ sudo vi sudo.conf
+[ec2-user@ip-172-31-30-119 etc]$ sudo su - prasiddh
+Last login: Wed May  8 05:11:53 UTC 2024 on pts/0
+[prasiddh@ip-172-31-30-119 ~]$ logout
+[ec2-user@ip-172-31-30-119 etc]$
+[ec2-user@ip-172-31-30-119 etc]$ cd
+[ec2-user@ip-172-31-30-119 ~]$
+[ec2-user@ip-172-31-30-119 ~]$ su - prasiddh
+Password:
+Last login: Wed May  8 05:16:13 UTC 2024 on pts/0
+[prasiddh@ip-172-31-30-119 ~]$ exit
+logout
+[ec2-user@ip-172-31-30-119 ~]$ sudo su - prasidddh
+su: user prasidddh does not exist or the user entry does not contain all the required fields
+[ec2-user@ip-172-31-30-119 ~]$ sudo su - prasiddh
+Last login: Wed May  8 05:17:39 UTC 2024 on pts/0
+[prasiddh@ip-172-31-30-119 ~]$ exit
+logout
+[ec2-user@ip-172-31-30-119 ~]$ su prasiddh
+Password:
+[prasiddh@ip-172-31-30-119 ec2-user]$ exit
+exit
+[ec2-user@ip-172-31-30-119 ~]$ sudo su prasiddh
+[prasiddh@ip-172-31-30-119 ec2-user]$ pwd
+/home/ec2-user
+[prasiddh@ip-172-31-30-119 ec2-user]$ exit
+exit
+[ec2-user@ip-172-31-30-119 ~]$ sudo su - prasiddh
+Last login: Wed May  8 05:27:01 UTC 2024 on pts/0
+[prasiddh@ip-172-31-30-119 ~]$ pwd
+/home/prasiddh
+[prasiddh@ip-172-31-30-119 ~]$ exit
+logout
+[ec2-user@ip-172-31-30-119 ~]$
+[ec2-user@ip-172-31-30-119 ~]$ sudo su prasiddh
+[prasiddh@ip-172-31-30-119 ec2-user]$ pwd
+/home/ec2-user
+[prasiddh@ip-172-31-30-119 ec2-user]$ touch doubt.txt
+touch: cannot touch 'doubt.txt': Permission denied
+[prasiddh@ip-172-31-30-119 ec2-user]$ ls
+ls: cannot open directory '.': Permission denied
+[prasiddh@ip-172-31-30-119 ec2-user]$ cd
+[prasiddh@ip-172-31-30-119 ~]$ pwd
+/home/prasiddh
+[prasiddh@ip-172-31-30-119 ~]$ ls
+[prasiddh@ip-172-31-30-119 ~]$ touch dddd.txt
+[prasiddh@ip-172-31-30-119 ~]$ exit
+exit
+[ec2-user@ip-172-31-30-119 ~]$
+[ec2-user@ip-172-31-30-119 ~]$ man usermod
+[ec2-user@ip-172-31-30-119 ~]$ sudo usermod -l daksh prasiddh
+[ec2-user@ip-172-31-30-119 ~]$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:65534:65534:Kernel Overflow User:/:/sbin/nologin
+systemd-coredump:x:999:997:systemd Core Dumper:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+polkitd:x:998:996:User for polkitd:/:/sbin/nologin
+tss:x:59:59:Account used for TPM access:/:/sbin/nologin
+sssd:x:997:994:User for sssd:/:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/usr/share/empty.sshd:/sbin/nologin
+chrony:x:996:993:chrony system user:/var/lib/chrony:/sbin/nologin
+systemd-oom:x:991:991:systemd Userspace OOM Killer:/:/usr/sbin/nologin
+ec2-user:x:1000:1000:Cloud User:/home/ec2-user:/bin/bash
+daksh:x:1001:1001::/home/prasiddh:/bin/bash
+[ec2-user@ip-172-31-30-119 ~]$ sudo su - prasiddh
+su: user prasiddh does not exist or the user entry does not contain all the required fields
+[ec2-user@ip-172-31-30-119 ~]$ sudo su - daksh
+Last login: Wed May  8 05:30:27 UTC 2024 on pts/0
+[daksh@ip-172-31-30-119 ~]$ whoami
+daksh
+[daksh@ip-172-31-30-119 ~]$ pwd
+/home/prasiddh
+[daksh@ip-172-31-30-119 ~]$ man
+[daksh@ip-172-31-30-119 ~]$ man userdel
+[daksh@ip-172-31-30-119 ~]$ sudo userdel timbaktu
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+[sudo] password for daksh:
+sudo: a password is required
+[daksh@ip-172-31-30-119 ~]$ exit
+logout
+[ec2-user@ip-172-31-30-119 ~]$ sudo userdel timbaktu
+userdel: user 'timbaktu' does not exist
+[ec2-user@ip-172-31-30-119 ~]$ sudo userdel daksh
+[ec2-user@ip-172-31-30-119 ~]$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:65534:65534:Kernel Overflow User:/:/sbin/nologin
+systemd-coredump:x:999:997:systemd Core Dumper:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+polkitd:x:998:996:User for polkitd:/:/sbin/nologin
+tss:x:59:59:Account used for TPM access:/:/sbin/nologin
+sssd:x:997:994:User for sssd:/:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/usr/share/empty.sshd:/sbin/nologin
+chrony:x:996:993:chrony system user:/var/lib/chrony:/sbin/nologin
+systemd-oom:x:991:991:systemd Userspace OOM Killer:/:/usr/sbin/nologin
+ec2-user:x:1000:1000:Cloud User:/home/ec2-user:/bin/bash
+[ec2-user@ip-172-31-30-119 ~]$
+[ec2-user@ip-172-31-30-119 ~]$ id
+uid=1000(ec2-user) gid=1000(ec2-user) groups=1000(ec2-user),4(adm),190(systemd-journal) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+[ec2-user@ip-172-31-30-119 ~]$ sudo id root
+uid=0(root) gid=0(root) groups=0(root)
+[ec2-user@ip-172-31-30-119 ~]$ sudo su - root
+[root@ip-172-31-30-119 ~]# exit
+logout
+[ec2-user@ip-172-31-30-119 ~]$
+[ec2-user@ip-172-31-30-119 ~]$ man groupadd
+[ec2-user@ip-172-31-30-119 ~]$ sudo groupadd engineering
+[ec2-user@ip-172-31-30-119 ~]$ cat /etc/group
+root:x:0:
+bin:x:1:
+daemon:x:2:
+sys:x:3:
+adm:x:4:ec2-user
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mem:x:8:
+kmem:x:9:
+wheel:x:10:
+cdrom:x:11:
+mail:x:12:
+man:x:15:
+dialout:x:18:
+floppy:x:19:
+games:x:20:
+tape:x:33:
+video:x:39:
+ftp:x:50:
+lock:x:54:
+audio:x:63:
+users:x:100:
+nobody:x:65534:
+utmp:x:22:
+utempter:x:35:
+input:x:999:
+kvm:x:36:
+render:x:998:
+systemd-journal:x:190:ec2-user
+systemd-coredump:x:997:
+dbus:x:81:
+polkitd:x:996:
+ssh_keys:x:995:
+tss:x:59:
+sssd:x:994:
+sshd:x:74:
+chrony:x:993:
+sgx:x:992:
+systemd-oom:x:991:
+ec2-user:x:1000:
+prasiddh:x:1001:
+engineering:x:1002:
+[ec2-user@ip-172-31-30-119 ~]$
+[ec2-user@ip-172-31-30-119 ~]$ sudo useradd daksh
+Creating mailbox file: File exists
+[ec2-user@ip-172-31-30-119 ~]$ sudo useradd dakshp
+[ec2-user@ip-172-31-30-119 ~]$ sudo useradd deepali
+[ec2-user@ip-172-31-30-119 ~]$ sudo useradd teena
+[ec2-user@ip-172-31-30-119 ~]$ sudo id dakshp
+uid=1002(dakshp) gid=1004(dakshp) groups=1004(dakshp)
+[ec2-user@ip-172-31-30-119 ~]$ man usermod
+[ec2-user@ip-172-31-30-119 ~]$ sudo usermod -G engineering dakshp
+[ec2-user@ip-172-31-30-119 ~]$ sudo id dakshp
+uid=1002(dakshp) gid=1004(dakshp) groups=1004(dakshp),1002(engineering)
+[ec2-user@ip-172-31-30-119 ~]$ sudo usermod -G engineering deepali
+[ec2-user@ip-172-31-30-119 ~]$ sudo id deepali
+uid=1003(deepali) gid=1005(deepali) groups=1005(deepali),1002(engineering)
+[ec2-user@ip-172-31-30-119 ~]$ sudo usermod -G engineering teena
+[ec2-user@ip-172-31-30-119 ~]$ sudo id teena
+uid=1004(teena) gid=1006(teena) groups=1006(teena),1002(engineering)
+[ec2-user@ip-172-31-30-119 ~]$ sudo usermod -G engineering  teena
+[ec2-user@ip-172-31-30-119 ~]$ sudo id teena
+uid=1004(teena) gid=1006(teena) groups=1006(teena),1002(engineering)
+[ec2-user@ip-172-31-30-119 ~]$ man usermod
+[ec2-user@ip-172-31-30-119 ~]$ sudo groupadd hr
+[ec2-user@ip-172-31-30-119 ~]$ sudo usermod -G hr deepali
+[ec2-user@ip-172-31-30-119 ~]$ sudo id deepali
+uid=1003(deepali) gid=1005(deepali) groups=1005(deepali),1007(hr)
+[ec2-user@ip-172-31-30-119 ~]$ sudo usermod -G engineering,hr deepali
+[ec2-user@ip-172-31-30-119 ~]$ sudo id deepali
+uid=1003(deepali) gid=1005(deepali) groups=1005(deepali),1002(engineering),1007(hr)
+[ec2-user@ip-172-31-30-119 ~]$
+[ec2-user@ip-172-31-30-119 ~]$ sudo usermod -G hr deepali
+[ec2-user@ip-172-31-30-119 ~]$
+[ec2-user@ip-172-31-30-119 ~]$ sudo id deepali
+uid=1003(deepali) gid=1005(deepali) groups=1005(deepali),1007(hr)
+[ec2-user@ip-172-31-30-119 ~]$ ls --help
+Usage: ls [OPTION]... [FILE]...
+List information about the FILEs (the current directory by default).
+Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --all                  do not ignore entries starting with .
+  -A, --almost-all           do not list implied . and ..
+      --author               with -l, print the author of each file
+  -b, --escape               print C-style escapes for nongraphic characters
+      --block-size=SIZE      with -l, scale sizes by SIZE when printing them;
+                               e.g., '--block-size=M'; see SIZE format below
+  -B, --ignore-backups       do not list implied entries ending with ~
+  -c                         with -lt: sort by, and show, ctime (time of last
+                               modification of file status information);
+                               with -l: show ctime and sort by name;
+                               otherwise: sort by ctime, newest first
+  -C                         list entries by columns
+      --color[=WHEN]         colorize the output; WHEN can be 'always' (default
+                               if omitted), 'auto', or 'never'; more info below
+  -d, --directory            list directories themselves, not their contents
+  -D, --dired                generate output designed for Emacs' dired mode
+  -f                         do not sort, enable -aU, disable -ls --color
+  -F, --classify             append indicator (one of */=>@|) to entries
+      --file-type            likewise, except do not append '*'
+      --format=WORD          across -x, commas -m, horizontal -x, long -l,
+                               single-column -1, verbose -l, vertical -C
+      --full-time            like -l --time-style=full-iso
+  -g                         like -l, but do not list owner
+      --group-directories-first
+                             group directories before files;
+                               can be augmented with a --sort option, but any
+                               use of --sort=none (-U) disables grouping
+  -G, --no-group             in a long listing, don't print group names
+  -h, --human-readable       with -l and -s, print sizes like 1K 234M 2G etc.
+      --si                   likewise, but use powers of 1000 not 1024
+  -H, --dereference-command-line
+                             follow symbolic links listed on the command line
+      --dereference-command-line-symlink-to-dir
+                             follow each command line symbolic link
+                               that points to a directory
+      --hide=PATTERN         do not list implied entries matching shell PATTERN
+                               (overridden by -a or -A)
+      --hyperlink[=WHEN]     hyperlink file names; WHEN can be 'always'
+                               (default if omitted), 'auto', or 'never'
+      --indicator-style=WORD  append indicator with style WORD to entry names:
+                               none (default), slash (-p),
+                               file-type (--file-type), classify (-F)
+  -i, --inode                print the index number of each file
+  -I, --ignore=PATTERN       do not list implied entries matching shell PATTERN
+  -k, --kibibytes            default to 1024-byte blocks for disk usage;
+                               used only with -s and per directory totals
+  -l                         use a long listing format
+  -L, --dereference          when showing file information for a symbolic
+                               link, show information for the file the link
+                               references rather than for the link itself
+  -m                         fill width with a comma separated list of entries
+  -n, --numeric-uid-gid      like -l, but list numeric user and group IDs
+  -N, --literal              print entry names without quoting
+  -o                         like -l, but do not list group information
+  -p, --indicator-style=slash
+                             append / indicator to directories
+  -q, --hide-control-chars   print ? instead of nongraphic characters
+      --show-control-chars   show nongraphic characters as-is (the default,
+                               unless program is 'ls' and output is a terminal)
+  -Q, --quote-name           enclose entry names in double quotes
+      --quoting-style=WORD   use quoting style WORD for entry names:
+                               literal, locale, shell, shell-always,
+                               shell-escape, shell-escape-always, c, escape
+                               (overrides QUOTING_STYLE environment variable)
+  -r, --reverse              reverse order while sorting
+  -R, --recursive            list subdirectories recursively
+  -s, --size                 print the allocated size of each file, in blocks
+  -S                         sort by file size, largest first
+      --sort=WORD            sort by WORD instead of name: none (-U), size (-S),
+                               time (-t), version (-v), extension (-X)
+      --time=WORD            change the default of using modification times;
+                               access time (-u): atime, access, use;
+                               change time (-c): ctime, status;
+                               birth time: birth, creation;
+                             with -l, WORD determines which time to show;
+                             with --sort=time, sort by WORD (newest first)
+      --time-style=TIME_STYLE  time/date format with -l; see TIME_STYLE below
+  -t                         sort by time, newest first; see --time
+  -T, --tabsize=COLS         assume tab stops at each COLS instead of 8
+  -u                         with -lt: sort by, and show, access time;
+                               with -l: show access time and sort by name;
+                               otherwise: sort by access time, newest first
+  -U                         do not sort; list entries in directory order
+  -v                         natural sort of (version) numbers within text
+  -w, --width=COLS           set output width to COLS.  0 means no limit
+  -x                         list entries by lines instead of by columns
+  -X                         sort alphabetically by entry extension
+  -Z, --context              print any security context of each file
+  -1                         list one file per line.  Avoid '\n' with -q or -b
+      --help     display this help and exit
+      --version  output version information and exit
+
+The SIZE argument is an integer and optional unit (example: 10K is 10*1024).
+Units are K,M,G,T,P,E,Z,Y (powers of 1024) or KB,MB,... (powers of 1000).
+Binary prefixes can be used, too: KiB=K, MiB=M, and so on.
+
+The TIME_STYLE argument can be full-iso, long-iso, iso, locale, or +FORMAT.
+FORMAT is interpreted like in date(1).  If FORMAT is FORMAT1<newline>FORMAT2,
+then FORMAT1 applies to non-recent files and FORMAT2 to recent files.
+TIME_STYLE prefixed with 'posix-' takes effect only outside the POSIX locale.
+Also the TIME_STYLE environment variable sets the default style to use.
+
+Using color to distinguish file types is disabled both by default and
+with --color=never.  With --color=auto, ls emits color codes only when
+standard output is connected to a terminal.  The LS_COLORS environment
+variable can change the settings.  Use the dircolors command to set it.
+
+Exit status:
+ 0  if OK,
+ 1  if minor problems (e.g., cannot access subdirectory),
+ 2  if serious trouble (e.g., cannot access command-line argument).
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Full documentation <https://www.gnu.org/software/coreutils/ls>
+or available locally via: info '(coreutils) ls invocation'
+[ec2-user@ip-172-31-30-119 ~]$ man ls
+[ec2-user@ip-172-31-30-119 ~]$
+[ec2-user@ip-172-31-30-119 ~]$ man ls
+[ec2-user@ip-172-31-30-119 ~]$ ls --help
+Usage: ls [OPTION]... [FILE]...
+List information about the FILEs (the current directory by default).
+Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --all                  do not ignore entries starting with .
+  -A, --almost-all           do not list implied . and ..
+      --author               with -l, print the author of each file
+  -b, --escape               print C-style escapes for nongraphic characters
+      --block-size=SIZE      with -l, scale sizes by SIZE when printing them;
+                               e.g., '--block-size=M'; see SIZE format below
+  -B, --ignore-backups       do not list implied entries ending with ~
+  -c                         with -lt: sort by, and show, ctime (time of last
+                               modification of file status information);
+                               with -l: show ctime and sort by name;
+                               otherwise: sort by ctime, newest first
+  -C                         list entries by columns
+      --color[=WHEN]         colorize the output; WHEN can be 'always' (default
+                               if omitted), 'auto', or 'never'; more info below
+  -d, --directory            list directories themselves, not their contents
+  -D, --dired                generate output designed for Emacs' dired mode
+  -f                         do not sort, enable -aU, disable -ls --color
+  -F, --classify             append indicator (one of */=>@|) to entries
+      --file-type            likewise, except do not append '*'
+      --format=WORD          across -x, commas -m, horizontal -x, long -l,
+                               single-column -1, verbose -l, vertical -C
+      --full-time            like -l --time-style=full-iso
+  -g                         like -l, but do not list owner
+      --group-directories-first
+                             group directories before files;
+                               can be augmented with a --sort option, but any
+                               use of --sort=none (-U) disables grouping
+  -G, --no-group             in a long listing, don't print group names
+  -h, --human-readable       with -l and -s, print sizes like 1K 234M 2G etc.
+      --si                   likewise, but use powers of 1000 not 1024
+  -H, --dereference-command-line
+                             follow symbolic links listed on the command line
+      --dereference-command-line-symlink-to-dir
+                             follow each command line symbolic link
+                               that points to a directory
+      --hide=PATTERN         do not list implied entries matching shell PATTERN
+                               (overridden by -a or -A)
+      --hyperlink[=WHEN]     hyperlink file names; WHEN can be 'always'
+                               (default if omitted), 'auto', or 'never'
+      --indicator-style=WORD  append indicator with style WORD to entry names:
+                               none (default), slash (-p),
+                               file-type (--file-type), classify (-F)
+  -i, --inode                print the index number of each file
+  -I, --ignore=PATTERN       do not list implied entries matching shell PATTERN
+  -k, --kibibytes            default to 1024-byte blocks for disk usage;
+                               used only with -s and per directory totals
+  -l                         use a long listing format
+  -L, --dereference          when showing file information for a symbolic
+                               link, show information for the file the link
+                               references rather than for the link itself
+  -m                         fill width with a comma separated list of entries
+  -n, --numeric-uid-gid      like -l, but list numeric user and group IDs
+  -N, --literal              print entry names without quoting
+  -o                         like -l, but do not list group information
+  -p, --indicator-style=slash
+                             append / indicator to directories
+  -q, --hide-control-chars   print ? instead of nongraphic characters
+      --show-control-chars   show nongraphic characters as-is (the default,
+                               unless program is 'ls' and output is a terminal)
+  -Q, --quote-name           enclose entry names in double quotes
+      --quoting-style=WORD   use quoting style WORD for entry names:
+                               literal, locale, shell, shell-always,
+                               shell-escape, shell-escape-always, c, escape
+                               (overrides QUOTING_STYLE environment variable)
+  -r, --reverse              reverse order while sorting
+  -R, --recursive            list subdirectories recursively
+  -s, --size                 print the allocated size of each file, in blocks
+  -S                         sort by file size, largest first
+      --sort=WORD            sort by WORD instead of name: none (-U), size (-S),
+                               time (-t), version (-v), extension (-X)
+      --time=WORD            change the default of using modification times;
+                               access time (-u): atime, access, use;
+                               change time (-c): ctime, status;
+                               birth time: birth, creation;
+                             with -l, WORD determines which time to show;
+                             with --sort=time, sort by WORD (newest first)
+      --time-style=TIME_STYLE  time/date format with -l; see TIME_STYLE below
+  -t                         sort by time, newest first; see --time
+  -T, --tabsize=COLS         assume tab stops at each COLS instead of 8
+  -u                         with -lt: sort by, and show, access time;
+                               with -l: show access time and sort by name;
+                               otherwise: sort by access time, newest first
+  -U                         do not sort; list entries in directory order
+  -v                         natural sort of (version) numbers within text
+  -w, --width=COLS           set output width to COLS.  0 means no limit
+  -x                         list entries by lines instead of by columns
+  -X                         sort alphabetically by entry extension
+  -Z, --context              print any security context of each file
+  -1                         list one file per line.  Avoid '\n' with -q or -b
+      --help     display this help and exit
+      --version  output version information and exit
+
+The SIZE argument is an integer and optional unit (example: 10K is 10*1024).
+Units are K,M,G,T,P,E,Z,Y (powers of 1024) or KB,MB,... (powers of 1000).
+Binary prefixes can be used, too: KiB=K, MiB=M, and so on.
+
+The TIME_STYLE argument can be full-iso, long-iso, iso, locale, or +FORMAT.
+FORMAT is interpreted like in date(1).  If FORMAT is FORMAT1<newline>FORMAT2,
+then FORMAT1 applies to non-recent files and FORMAT2 to recent files.
+TIME_STYLE prefixed with 'posix-' takes effect only outside the POSIX locale.
+Also the TIME_STYLE environment variable sets the default style to use.
+
+Using color to distinguish file types is disabled both by default and
+with --color=never.  With --color=auto, ls emits color codes only when
+standard output is connected to a terminal.  The LS_COLORS environment
+variable can change the settings.  Use the dircolors command to set it.
+
+Exit status:
+ 0  if OK,
+ 1  if minor problems (e.g., cannot access subdirectory),
+ 2  if serious trouble (e.g., cannot access command-line argument).
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Full documentation <https://www.gnu.org/software/coreutils/ls>
+or available locally via: info '(coreutils) ls invocation'
+[ec2-user@ip-172-31-30-119 ~]$ man ls
+[ec2-user@ip-172-31-30-119 ~]$
+[ec2-user@ip-172-31-30-119 ~]$ man usermod
+[ec2-user@ip-172-31-30-119 ~]$ sudo id deepali
+uid=1003(deepali) gid=1005(deepali) groups=1005(deepali),1007(hr)
+[ec2-user@ip-172-31-30-119 ~]$ man usermod
+[ec2-user@ip-172-31-30-119 ~]$ sudo usermod -G engineering,hr deepali
+[ec2-user@ip-172-31-30-119 ~]$ sudo id deepali
+uid=1003(deepali) gid=1005(deepali) groups=1005(deepali),1002(engineering),1007(hr)
+[ec2-user@ip-172-31-30-119 ~]$ sudo groupadd kites
+[ec2-user@ip-172-31-30-119 ~]$ man usermod
+[ec2-user@ip-172-31-30-119 ~]$ sudo usermod -aG kites  deepali
+[ec2-user@ip-172-31-30-119 ~]$ sudo id deepali
+uid=1003(deepali) gid=1005(deepali) groups=1005(deepali),1002(engineering),1007(hr),1008(kites)
+[ec2-user@ip-172-31-30-119 ~]$ man usermod
+[ec2-user@ip-172-31-30-119 ~]$ sudo groupdel kites
+[ec2-user@ip-172-31-30-119 ~]$ sudo groupdel hr
+[ec2-user@ip-172-31-30-119 ~]$ sudo groupdel engineering
+[ec2-user@ip-172-31-30-119 ~]$ cat /etc/group
+root:x:0:
+bin:x:1:
+daemon:x:2:
+sys:x:3:
+adm:x:4:ec2-user
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mem:x:8:
+kmem:x:9:
+wheel:x:10:
+cdrom:x:11:
+mail:x:12:
+man:x:15:
+dialout:x:18:
+floppy:x:19:
+games:x:20:
+tape:x:33:
+video:x:39:
+ftp:x:50:
+lock:x:54:
+audio:x:63:
+users:x:100:
+nobody:x:65534:
+utmp:x:22:
+utempter:x:35:
+input:x:999:
+kvm:x:36:
+render:x:998:
+systemd-journal:x:190:ec2-user
+systemd-coredump:x:997:
+dbus:x:81:
+polkitd:x:996:
+ssh_keys:x:995:
+tss:x:59:
+sssd:x:994:
+sshd:x:74:
+chrony:x:993:
+sgx:x:992:
+systemd-oom:x:991:
+ec2-user:x:1000:
+prasiddh:x:1001:
+daksh:x:1003:
+dakshp:x:1004:
+deepali:x:1005:
+teena:x:1006:
+[ec2-user@ip-172-31-30-119 ~]$
+[ec2-user@ip-172-31-30-119 ~]$ sudo useradd joy
+[ec2-user@ip-172-31-30-119 ~]$ sudo groupadd hr
+[ec2-user@ip-172-31-30-119 ~]$ sudo groupadd engineering
+[ec2-user@ip-172-31-30-119 ~]$ sudo usermod -G hr,engineering joy
+[ec2-user@ip-172-31-30-119 ~]$ sudo id joy
+uid=1005(joy) gid=1007(joy) groups=1007(joy),1008(hr),1009(engineering)
+[ec2-user@ip-172-31-30-119 ~]$ sudo usermod -G hr joy
+[ec2-user@ip-172-31-30-119 ~]$ sudo id joy
+uid=1005(joy) gid=1007(joy) groups=1007(joy),1008(hr)
+[ec2-user@ip-172-31-30-119 ~]$ man usermod
+[ec2-user@ip-172-31-30-119 ~]$ man groupdel
+[ec2-user@ip-172-31-30-119 ~]$ sudo groupdel hr
+[ec2-user@ip-172-31-30-119 ~]$ sudo id joy
+uid=1005(joy) gid=1007(joy) groups=1007(joy)
+[ec2-user@ip-172-31-30-119 ~]$ man gpasswd
+[ec2-user@ip-172-31-30-119 ~]$

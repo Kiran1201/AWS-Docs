@@ -1,0 +1,66 @@
+15 JUNE 2024
+# Autoscalling group (ASG)
+  it is ec2 auto scalling. 
+  It is support horizantal scalling. 
+  it is regional (it is work in specific region)
+  we combine load balancer in real time. 
+  if we enable instance warmup we have to wait some time. 
+
+# scale- in -> whenever we create instances when demand increase is called scale-in
+  scale -out -> whenever we delete instances when demand decrease is called scale-out
+
+# practical of auto scalling
+  step 1: create SNS and subscription
+  step 2: launch ec2 instance(allow http) and config ec2 instance and create custom AMI
+  step 3: create launch templates
+  step 4: create ASG 
+          1. service -> compute -> ec2 -> left hand side auto scaling
+          2. click on create ASG
+          3. enter name
+          4. choose launch templates
+          5. click on create
+          6. instance type if you want
+          7. choose vpc and subnets if u want
+          8. click on next
+          9. choose load balancer
+          10. choose vpc lattice (if we want network performance we use vpc lattic) if u want
+          11. health check
+          12. enable cloudwatch in additional settings
+          13. enable instance warmup if want
+          14. click on next
+          15. enter desired capacity
+          16. in scalling add min desired capacity(ex. 1)and max desired capacity(ex. 3)
+          17. choose scalling policy if u want otherwise no scalling pollicy
+          18. choose instance maintainance policy (create instance before existing instance terminate)
+          19. choose scale-in if want
+          20. click on next
+          21. add notofication (SNS service)
+          22. click on next
+          23. add tags if u want 
+          24. click next and review and click on create ASG
+  step 5: create AS policy
+          1. policy type
+          2. policy name (scale-in, scale-out)
+          3. create cloud watch alarm (for simple AS policy) -> choose ec2 -> ASG -> choose cpu utilize metrics. (create 2 alarms scale in and scale out)
+          4. choose cloudwatch alarm in policy
+          5. create action for (scale-out choose option add)
+          6. choose no of instances and time
+          7. repeat again step 4 to 6 for scale-in or scal-out
+  step 6: connect instance using putty 
+  step 7: incraese cpu load using yes > dev/null & 5 times
+  step 8: go to cloudwatch alarm and wait to triger
+  step 9: go to autoscalling and check instance no and check ec2 instances created or decreased 
+ 
+
+# **Autoscalling policy
+  1. schedule activity -> set time to create server.
+  2. productive scaling -> if demand increase server craeted or demand decrese server delete
+  3. dynamic scalling
+     a. target tracking -> if the metrics (perfomance) target reach incraese server.
+     b. step scaling ->  add specific target step by step and create more instances.
+        example: in step 1->  I set the condition if metrics reach 30% then craete 2 instance
+                    step 2 -> I set the condition if metrics raech  50% then craete 3 more instances
+                    so i get total 5 instances
+     c. simple scaling -> using cloudwatch alarm when alarm state reach in alarm state its trigger and create or decrease instance according the condition config
+
+# task: create a high level architecture load balancer and instance, integrated with application load balancer with autoscalling and deploy amazon website, netflix

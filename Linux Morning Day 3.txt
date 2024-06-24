@@ -1,0 +1,124 @@
+login as: ec2-user
+Authenticating with public key "imported-openssh-key"
+Register this system with Red Hat Insights: insights-client --register
+Create an account or view all your systems at https://red.ht/insights-dashboard
+[ec2-user@ip-172-31-27-90 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-27-90 ~]$ cd /tmp
+[ec2-user@ip-172-31-27-90 tmp]$ pwd
+/tmp
+[ec2-user@ip-172-31-27-90 tmp]$ cd ..
+[ec2-user@ip-172-31-27-90 /]$ pwd
+/
+[ec2-user@ip-172-31-27-90 /]$ cd ..
+[ec2-user@ip-172-31-27-90 /]$ pwd
+/
+[ec2-user@ip-172-31-27-90 /]$ cd /home/ec2-user/
+[ec2-user@ip-172-31-27-90 ~]$
+[ec2-user@ip-172-31-27-90 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-27-90 ~]$ mkdir /home/ec2-user/joker
+[ec2-user@ip-172-31-27-90 ~]$ ls
+joker
+[ec2-user@ip-172-31-27-90 ~]$ mkdir /home/ec2-user/joker/circus
+[ec2-user@ip-172-31-27-90 ~]$ touch /home/ec2-user/joker/clown.txt
+[ec2-user@ip-172-31-27-90 ~]$ touch /home/ec2-user/joker/circus/funny.txt
+[ec2-user@ip-172-31-27-90 ~]$ touch /home/ec2-user/joker/circus/fun.txt
+[ec2-user@ip-172-31-27-90 ~]$ mkdir /home/ec2-user/poker
+[ec2-user@ip-172-31-27-90 ~]$ touch /home/ec2-user/poker/gambling.txt
+[ec2-user@ip-172-31-27-90 ~]$ mkdir /home/ec2-user/poker/face
+[ec2-user@ip-172-31-27-90 ~]$ mkdir /home/ec2-user/locker
+[ec2-user@ip-172-31-27-90 ~]$ touch /home/ec2-user/locker/key.txt
+[ec2-user@ip-172-31-27-90 ~]$ mkdir /home/ec2-user/locker/steel
+[ec2-user@ip-172-31-27-90 ~]$ touch /home/ec2-user/locker/steel/solid.txt
+[ec2-user@ip-172-31-27-90 ~]$ ls -R /home/ec2-user/joker   /home/ec2-user/poker   /home/ec2-user/locker
+/home/ec2-user/joker:
+circus  clown.txt
+
+/home/ec2-user/joker/circus:
+funny.txt  fun.txt
+
+/home/ec2-user/locker:
+key.txt  steel
+
+/home/ec2-user/locker/steel:
+solid.txt
+
+/home/ec2-user/poker:
+face  gambling.txt
+
+/home/ec2-user/poker/face:
+[ec2-user@ip-172-31-27-90 ~]$ ls
+joker  locker  poker
+[ec2-user@ip-172-31-27-90 ~]$ ls -R joker poker locker
+joker:
+circus  clown.txt
+
+joker/circus:
+funny.txt  fun.txt
+
+locker:
+key.txt  steel
+
+locker/steel:
+solid.txt
+
+poker:
+face  gambling.txt
+
+poker/face:
+[ec2-user@ip-172-31-27-90 ~]$
+[ec2-user@ip-172-31-27-90 ~]$ rm -r *
+[ec2-user@ip-172-31-27-90 ~]$
+[ec2-user@ip-172-31-27-90 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-27-90 ~]$ mkdir /home/ec2-user/strangerthings
+[ec2-user@ip-172-31-27-90 ~]$ touch /home/ec2-user/strangerthings/dragonballz.txt
+[ec2-user@ip-172-31-27-90 ~]$ mkdir /home/ec2-user/naruto
+[ec2-user@ip-172-31-27-90 ~]$ mkdir /home/ec2-user/naruto/demonslayer
+[ec2-user@ip-172-31-27-90 ~]$ mkdir /home/ec2-user/naruto/blackclover
+[ec2-user@ip-172-31-27-90 ~]$ touch /home/ec2-user/naruto/blackclover/mamlalegalhai.txt
+[ec2-user@ip-172-31-27-90 ~]$ mkdir /home/ec2-user/oggy
+[ec2-user@ip-172-31-27-90 ~]$ mkdir /home/ec2-user/oggy/attackontitan
+[ec2-user@ip-172-31-27-90 ~]$ touch /home/ec2-user/oggy/narcos.txt
+[ec2-user@ip-172-31-27-90 ~]$ touch /home/ec2-user/oggy/attackontitan/shinchan.txt
+[ec2-user@ip-172-31-27-90 ~]$ touch /home/ec2-user/oggy/attackontitan/theoffice.txt
+[ec2-user@ip-172-31-27-90 ~]$ touch /home/ec2-user/oggy/attackontitan/benten.txt
+[ec2-user@ip-172-31-27-90 ~]$ mkdir /home/ec2-user/sizuka
+[ec2-user@ip-172-31-27-90 ~]$ mkdir /home/ec2-user/sizuka/loonytunes
+[ec2-user@ip-172-31-27-90 ~]$ mkdir /home/ec2-user/sizuka/onepiece
+[ec2-user@ip-172-31-27-90 ~]$ touch /home/ec2-user/sizuka/loonytunes/chottabheem.txt
+[ec2-user@ip-172-31-27-90 ~]$ mkdir /home/ec2-user/sizuka/onepiece/breakingbad
+[ec2-user@ip-172-31-27-90 ~]$ touch /home/ec2-user/sizuka/onepiece/baki.txt
+[ec2-user@ip-172-31-27-90 ~]$ ls -R strangerthings naruto oggy sizuka
+naruto:
+blackclover  demonslayer
+
+naruto/blackclover:
+mamlalegalhai.txt
+
+naruto/demonslayer:
+
+oggy:
+attackontitan  narcos.txt
+
+oggy/attackontitan:
+benten.txt  shinchan.txt  theoffice.txt
+
+sizuka:
+loonytunes  onepiece
+
+sizuka/loonytunes:
+chottabheem.txt
+
+sizuka/onepiece:
+baki.txt  breakingbad
+
+sizuka/onepiece/breakingbad:
+
+strangerthings:
+dragonballz.txt
+[ec2-user@ip-172-31-27-90 ~]$
+[ec2-user@ip-172-31-27-90 ~]$ rm -r  *
+[ec2-user@ip-172-31-27-90 ~]$
+

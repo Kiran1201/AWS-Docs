@@ -1,0 +1,58 @@
+login as: ec2-user
+Authenticating with public key "imported-openssh-key"
+Register this system with Red Hat Insights: insights-client --register
+Create an account or view all your systems at https://red.ht/insights-dashboard
+[ec2-user@ip-172-31-21-88 ~]$
+[ec2-user@ip-172-31-21-88 ~]$ cd /tmp
+[ec2-user@ip-172-31-21-88 tmp]$ cd /mnt
+[ec2-user@ip-172-31-21-88 mnt]$
+[ec2-user@ip-172-31-21-88 mnt]$ cd
+[ec2-user@ip-172-31-21-88 ~]$
+[ec2-user@ip-172-31-21-88 ~]$ man  cat
+[ec2-user@ip-172-31-21-88 ~]$ man  pwd
+[ec2-user@ip-172-31-21-88 ~]$ man  man
+[ec2-user@ip-172-31-21-88 ~]$ man  pwd
+[ec2-user@ip-172-31-21-88 ~]$
+[ec2-user@ip-172-31-21-88 ~]$ man pwd
+[ec2-user@ip-172-31-21-88 ~]$
+[ec2-user@ip-172-31-21-88 ~]$ man pwd
+[ec2-user@ip-172-31-21-88 ~]$
+[ec2-user@ip-172-31-21-88 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-21-88 ~]$ cd /tmp
+[ec2-user@ip-172-31-21-88 tmp]$ pwd
+/tmp
+[ec2-user@ip-172-31-21-88 tmp]$ cd
+[ec2-user@ip-172-31-21-88 ~]$
+[ec2-user@ip-172-31-21-88 ~]$ man cat
+[ec2-user@ip-172-31-21-88 ~]$ cat
+Tejas is super smart
+Tejas is super smart
+Vaishnavi is a linux champion
+Vaishnavi is a linux champion
+2+2
+2+2
+[ec2-user@ip-172-31-21-88 ~]$ cat > myfirstfile.txt
+MOnkey is brilliant
+Money Heist is awesome
+[ec2-user@ip-172-31-21-88 ~]$ cat myfirstfile.txt
+MOnkey is brilliant
+Money Heist is awesome
+[ec2-user@ip-172-31-21-88 ~]$ # Create 2 files and put some content in it . Once the files are created , merge the content of the file and store it in the third file.
+[ec2-user@ip-172-31-21-88 ~]$ cat > file1.txt
+Prasiddh
+[ec2-user@ip-172-31-21-88 ~]$ cat > file2.txt
+Saxena
+[ec2-user@ip-172-31-21-88 ~]$ cat file1.txt
+Prasiddh
+[ec2-user@ip-172-31-21-88 ~]$ cat file2.txt
+Saxena
+[ec2-user@ip-172-31-21-88 ~]$ man cat
+[ec2-user@ip-172-31-21-88 ~]$ cat file1.txt file2.txt
+Prasiddh
+Saxena
+[ec2-user@ip-172-31-21-88 ~]$ cat file1.txt file2.txt >  file3.txt
+[ec2-user@ip-172-31-21-88 ~]$ cat file3.txt
+Prasiddh
+Saxena
+[ec2-user@ip-172-31-21-88 ~]$

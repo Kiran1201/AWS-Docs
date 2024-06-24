@@ -1,0 +1,428 @@
+Using username "ec2-user".
+Authenticating with public key "imported-openssh-key"
+Register this system with Red Hat Insights: insights-client --register
+Create an account or view all your systems at https://red.ht/insights-dashboard
+[ec2-user@ip-172-31-45-136 ~]$ touch gg.txt
+[ec2-user@ip-172-31-45-136 ~]$ mkdir aaaa
+[ec2-user@ip-172-31-45-136 ~]$ ls -l
+total 0
+drwxr-xr-x. 2 ec2-user ec2-user 6 May  9 04:20 aaaa
+-rw-r--r--. 1 ec2-user ec2-user 0 May  9 04:20 gg.txt
+[ec2-user@ip-172-31-45-136 ~]$ sudo useradd prasiddh
+[ec2-user@ip-172-31-45-136 ~]$ sudo useradd kaushik
+[ec2-user@ip-172-31-45-136 ~]$ sudo groupadd hr
+[ec2-user@ip-172-31-45-136 ~]$ sudo groupadd interns
+[ec2-user@ip-172-31-45-136 ~]$ man chown
+[ec2-user@ip-172-31-45-136 ~]$ sudo chown prasiddh aaaa
+[ec2-user@ip-172-31-45-136 ~]$ ls -l
+total 0
+drwxr-xr-x. 2 prasiddh ec2-user 6 May  9 04:20 aaaa
+-rw-r--r--. 1 ec2-user ec2-user 0 May  9 04:20 gg.txt
+[ec2-user@ip-172-31-45-136 ~]$ sudo chown kaushik gg.txt
+[ec2-user@ip-172-31-45-136 ~]$ ls -l
+total 0
+drwxr-xr-x. 2 prasiddh ec2-user 6 May  9 04:20 aaaa
+-rw-r--r--. 1 kaushik  ec2-user 0 May  9 04:20 gg.txt
+[ec2-user@ip-172-31-45-136 ~]$ man chgrp
+[ec2-user@ip-172-31-45-136 ~]$ sudo chgrp hr aaaa
+[ec2-user@ip-172-31-45-136 ~]$ ls -l
+total 0
+drwxr-xr-x. 2 prasiddh hr       6 May  9 04:20 aaaa
+-rw-r--r--. 1 kaushik  ec2-user 0 May  9 04:20 gg.txt
+[ec2-user@ip-172-31-45-136 ~]$ sudo chgrp interns gg.txt
+[ec2-user@ip-172-31-45-136 ~]$ ls -l
+total 0
+drwxr-xr-x. 2 prasiddh hr      6 May  9 04:20 aaaa
+-rw-r--r--. 1 kaushik  interns 0 May  9 04:20 gg.txt
+[ec2-user@ip-172-31-45-136 ~]$
+[ec2-user@ip-172-31-45-136 ~]$ sudo rm -r *
+[ec2-user@ip-172-31-45-136 ~]$
+[ec2-user@ip-172-31-45-136 ~]$ touch fafaf.txt
+[ec2-user@ip-172-31-45-136 ~]$ ls -l
+total 0
+-rw-r--r--. 1 ec2-user ec2-user 0 May  9 05:05 fafaf.txt
+[ec2-user@ip-172-31-45-136 ~]$ chmod 667 fafaf.txt
+[ec2-user@ip-172-31-45-136 ~]$ ls -l
+total 0
+-rw-rw-rwx. 1 ec2-user ec2-user 0 May  9 05:05 fafaf.txt
+[ec2-user@ip-172-31-45-136 ~]$ chmod 412 fafaf.txt
+[ec2-user@ip-172-31-45-136 ~]$ ls -l
+total 0
+-r----x-w-. 1 ec2-user ec2-user 0 May  9 05:05 fafaf.txt
+[ec2-user@ip-172-31-45-136 ~]$ chmod u=rw,g=rw,o=wx fafaf.txt
+[ec2-user@ip-172-31-45-136 ~]$ ls -l
+total 0
+-rw-rw--wx. 1 ec2-user ec2-user 0 May  9 05:05 fafaf.txt
+[ec2-user@ip-172-31-45-136 ~]$ mkdir testing
+[ec2-user@ip-172-31-45-136 ~]$ ls -l
+total 0
+-rw-rw--wx. 1 ec2-user ec2-user 0 May  9 05:05 fafaf.txt
+drwxr-xr-x. 2 ec2-user ec2-user 6 May  9 06:18 testing
+[ec2-user@ip-172-31-45-136 ~]$ chmod 667 testing
+[ec2-user@ip-172-31-45-136 ~]$ ls -l
+total 0
+-rw-rw--wx. 1 ec2-user ec2-user 0 May  9 05:05 fafaf.txt
+drw-rw-rwx. 2 ec2-user ec2-user 6 May  9 06:18 testing
+[ec2-user@ip-172-31-45-136 ~]$ chmod u=r,g=w,o=rwx testing
+[ec2-user@ip-172-31-45-136 ~]$ ls -l
+total 0
+-rw-rw--wx. 1 ec2-user ec2-user 0 May  9 05:05 fafaf.txt
+dr---w-rwx. 2 ec2-user ec2-user 6 May  9 06:18 testing
+[ec2-user@ip-172-31-45-136 ~]$
+[ec2-user@ip-172-31-45-136 ~]$ touch adarsh.txt
+[ec2-user@ip-172-31-45-136 ~]$ ls -l
+total 0
+-rw-r--r--. 1 ec2-user ec2-user 0 May  9 06:35 adarsh.txt
+-rw-rw--wx. 1 ec2-user ec2-user 0 May  9 05:05 fafaf.txt
+dr---w-rwx. 2 ec2-user ec2-user 6 May  9 06:18 testing
+[ec2-user@ip-172-31-45-136 ~]$ touch kiran.txt
+[ec2-user@ip-172-31-45-136 ~]$ ls -l
+total 0
+-rw-r--r--. 1 ec2-user ec2-user 0 May  9 06:35 adarsh.txt
+-rw-rw--wx. 1 ec2-user ec2-user 0 May  9 05:05 fafaf.txt
+-rw-r--r--. 1 ec2-user ec2-user 0 May  9 06:35 kiran.txt
+dr---w-rwx. 2 ec2-user ec2-user 6 May  9 06:18 testing
+[ec2-user@ip-172-31-45-136 ~]$ mkdir saiprasad
+[ec2-user@ip-172-31-45-136 ~]$ ls -l
+total 0
+-rw-r--r--. 1 ec2-user ec2-user 0 May  9 06:35 adarsh.txt
+-rw-rw--wx. 1 ec2-user ec2-user 0 May  9 05:05 fafaf.txt
+-rw-r--r--. 1 ec2-user ec2-user 0 May  9 06:35 kiran.txt
+drwxr-xr-x. 2 ec2-user ec2-user 6 May  9 06:36 saiprasad
+dr---w-rwx. 2 ec2-user ec2-user 6 May  9 06:18 testing
+[ec2-user@ip-172-31-45-136 ~]$ mkdir manikanta
+[ec2-user@ip-172-31-45-136 ~]$ ls -l\
+> ^C
+[ec2-user@ip-172-31-45-136 ~]$ ls -l
+total 0
+-rw-r--r--. 1 ec2-user ec2-user 0 May  9 06:35 adarsh.txt
+-rw-rw--wx. 1 ec2-user ec2-user 0 May  9 05:05 fafaf.txt
+-rw-r--r--. 1 ec2-user ec2-user 0 May  9 06:35 kiran.txt
+drwxr-xr-x. 2 ec2-user ec2-user 6 May  9 06:36 manikanta
+drwxr-xr-x. 2 ec2-user ec2-user 6 May  9 06:36 saiprasad
+dr---w-rwx. 2 ec2-user ec2-user 6 May  9 06:18 testing
+[ec2-user@ip-172-31-45-136 ~]$
+[ec2-user@ip-172-31-45-136 ~]$ sudo su - root
+[root@ip-172-31-45-136 ~]#
+[root@ip-172-31-45-136 ~]# ps
+    PID TTY          TIME CMD
+   4639 pts/0    00:00:00 sudo
+   4641 pts/0    00:00:00 su
+   4642 pts/0    00:00:00 bash
+   4672 pts/0    00:00:00 ps
+[root@ip-172-31-45-136 ~]# ps -u ec2-user
+    PID TTY          TIME CMD
+   3963 ?        00:00:00 systemd
+   3965 ?        00:00:00 (sd-pam)
+   3972 ?        00:00:00 sshd
+   3973 pts/0    00:00:00 bash
+   4593 ?        00:00:00 sshd
+   4594 pts/1    00:00:00 bash
+   4669 pts/1    00:00:00 cat
+[root@ip-172-31-45-136 ~]# kill -15  4669
+[root@ip-172-31-45-136 ~]# ps -u ec2-user
+    PID TTY          TIME CMD
+   3963 ?        00:00:00 systemd
+   3965 ?        00:00:00 (sd-pam)
+   3972 ?        00:00:00 sshd
+   3973 pts/0    00:00:00 bash
+   4593 ?        00:00:00 sshd
+   4594 pts/1    00:00:00 bash
+   4686 pts/1    00:00:00 cat
+[root@ip-172-31-45-136 ~]# kill -9 4686
+[root@ip-172-31-45-136 ~]# man ps
+[root@ip-172-31-45-136 ~]#
+[root@ip-172-31-45-136 ~]# pstree
+systemd─┬─NetworkManager───2*[{NetworkManager}]
+        ├─2*[agetty]
+        ├─auditd───{auditd}
+        ├─chronyd
+        ├─crond
+        ├─dbus-broker-lau───dbus-broker
+        ├─polkitd───5*[{polkitd}]
+        ├─rhsmcertd───{rhsmcertd}
+        ├─rsyslogd───2*[{rsyslogd}]
+        ├─sshd─┬─sshd───sshd───bash───sudo───su───bash───pstre+
+        │      └─sshd───sshd───bash───cat
+        ├─systemd───(sd-pam)
+        ├─systemd-journal
+        ├─systemd-logind
+        ├─systemd-udevd
+        └─tuned───3*[{tuned}]
+[root@ip-172-31-45-136 ~]#
+[root@ip-172-31-45-136 ~]# ps -aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  2.1 172100 16292 ?        Ss   04:19   0:01 /usr/lib/systemd/systemd --switched-root --system --deserialize 31
+root           2  0.0  0.0      0     0 ?        S    04:19   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   04:19   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   04:19   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   04:19   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   04:19   0:00 [netns]
+root           8  0.0  0.0      0     0 ?        I<   04:19   0:00 [kworker/0:0H-events_highpri]
+root           9  0.0  0.0      0     0 ?        I    04:19   0:00 [kworker/u30:0-events_unbound]
+root          10  0.0  0.0      0     0 ?        I<   04:19   0:00 [mm_percpu_wq]
+root          12  0.0  0.0      0     0 ?        I    04:19   0:00 [rcu_tasks_kthre]
+root          13  0.0  0.0      0     0 ?        I    04:19   0:00 [rcu_tasks_rude_]
+root          14  0.0  0.0      0     0 ?        I    04:19   0:00 [rcu_tasks_trace]
+root          15  0.0  0.0      0     0 ?        S    04:19   0:00 [ksoftirqd/0]
+root          16  0.0  0.0      0     0 ?        S    04:19   0:00 [pr/tty0]
+root          17  0.0  0.0      0     0 ?        S    04:19   0:02 [pr/ttyS0]
+root          18  0.0  0.0      0     0 ?        I    04:19   0:00 [rcu_preempt]
+root          19  0.0  0.0      0     0 ?        S    04:19   0:00 [migration/0]
+root          20  0.0  0.0      0     0 ?        S    04:19   0:00 [idle_inject/0]
+root          22  0.0  0.0      0     0 ?        S    04:19   0:00 [cpuhp/0]
+root          24  0.0  0.0      0     0 ?        S    04:19   0:00 [kdevtmpfs]
+root          25  0.0  0.0      0     0 ?        I<   04:19   0:00 [inet_frag_wq]
+root          26  0.0  0.0      0     0 ?        S    04:19   0:00 [kauditd]
+root          27  0.0  0.0      0     0 ?        S    04:19   0:00 [khungtaskd]
+root          29  0.0  0.0      0     0 ?        S    04:19   0:00 [oom_reaper]
+root          30  0.0  0.0      0     0 ?        I<   04:19   0:00 [writeback]
+root          31  0.0  0.0      0     0 ?        S    04:19   0:00 [kcompactd0]
+root          32  0.0  0.0      0     0 ?        SN   04:19   0:00 [ksmd]
+root          33  0.0  0.0      0     0 ?        SN   04:19   0:00 [khugepaged]
+root          34  0.0  0.0      0     0 ?        I<   04:19   0:00 [cryptd]
+root          35  0.0  0.0      0     0 ?        I<   04:19   0:00 [kintegrityd]
+root          36  0.0  0.0      0     0 ?        I<   04:19   0:00 [kblockd]
+root          37  0.0  0.0      0     0 ?        I<   04:19   0:00 [blkcg_punt_bio]
+root          38  0.0  0.0      0     0 ?        I<   04:19   0:00 [tpm_dev_wq]
+root          39  0.0  0.0      0     0 ?        I<   04:19   0:00 [md]
+root          40  0.0  0.0      0     0 ?        I<   04:19   0:00 [edac-poller]
+root          41  0.0  0.0      0     0 ?        S    04:19   0:00 [watchdogd]
+root          42  0.0  0.0      0     0 ?        I<   04:19   0:00 [kworker/0:1H-kblockd]
+root          43  0.0  0.0      0     0 ?        S    04:19   0:00 [kswapd0]
+root          49  0.0  0.0      0     0 ?        I<   04:19   0:00 [kthrotld]
+root          53  0.0  0.0      0     0 ?        I<   04:19   0:00 [acpi_thermal_pm]
+root          54  0.0  0.0      0     0 ?        S    04:19   0:00 [xenbus]
+root          55  0.0  0.0      0     0 ?        S    04:19   0:00 [xenwatch]
+root          56  0.0  0.0      0     0 ?        I<   04:19   0:00 [kmpath_rdacd]
+root          57  0.0  0.0      0     0 ?        I<   04:19   0:00 [kaluad]
+root          58  0.0  0.0      0     0 ?        I<   04:19   0:00 [mld]
+root          59  0.0  0.0      0     0 ?        I<   04:19   0:00 [ipv6_addrconf]
+root          61  0.0  0.0      0     0 ?        I    04:19   0:00 [kworker/u30:3-writeback]
+root          69  0.0  0.0      0     0 ?        I<   04:19   0:00 [kstrp]
+root          81  0.0  0.0      0     0 ?        I<   04:19   0:00 [zswap-shrink]
+root         195  0.0  0.0      0     0 ?        I<   04:19   0:00 [kworker/u31:0]
+root         427  0.0  0.0      0     0 ?        I<   04:19   0:00 [ata_sff]
+root         428  0.0  0.0      0     0 ?        S    04:19   0:00 [scsi_eh_0]
+root         429  0.0  0.0      0     0 ?        I<   04:19   0:00 [scsi_tmf_0]
+root         431  0.0  0.0      0     0 ?        S    04:19   0:00 [scsi_eh_1]
+root         432  0.0  0.0      0     0 ?        I<   04:19   0:00 [scsi_tmf_1]
+root         448  0.0  0.0      0     0 ?        I<   04:19   0:00 [xfsalloc]
+root         449  0.0  0.0      0     0 ?        I<   04:19   0:00 [xfs_mru_cache]
+root         450  0.0  0.0      0     0 ?        I<   04:19   0:00 [xfs-buf/xvda4]
+root         451  0.0  0.0      0     0 ?        I<   04:19   0:00 [xfs-conv/xvda4]
+root         452  0.0  0.0      0     0 ?        I<   04:19   0:00 [xfs-reclaim/xvd]
+root         453  0.0  0.0      0     0 ?        I<   04:19   0:00 [xfs-blockgc/xvd]
+root         454  0.0  0.0      0     0 ?        I<   04:19   0:00 [xfs-inodegc/xvd]
+root         455  0.0  0.0      0     0 ?        I<   04:19   0:00 [xfs-log/xvda4]
+root         456  0.0  0.0      0     0 ?        I<   04:19   0:00 [xfs-cil/xvda4]
+root         457  0.0  0.0      0     0 ?        S    04:19   0:00 [xfsaild/xvda4]
+root         531  0.0  1.2  30012  9396 ?        Ss   04:19   0:00 /usr/lib/systemd/systemd-journald
+root         548  0.0  1.5  33792 12028 ?        Ss   04:19   0:00 /usr/lib/systemd/systemd-udevd
+root         568  0.0  0.0      0     0 ?        I<   04:19   0:00 [xfs-buf/xvda3]
+root         569  0.0  0.0      0     0 ?        I<   04:19   0:00 [xfs-conv/xvda3]
+root         570  0.0  0.0      0     0 ?        I<   04:19   0:00 [xfs-reclaim/xvd]
+root         571  0.0  0.0      0     0 ?        I<   04:19   0:00 [xfs-blockgc/xvd]
+root         573  0.0  0.0      0     0 ?        I<   04:19   0:00 [xfs-inodegc/xvd]
+root         574  0.0  0.0      0     0 ?        I<   04:19   0:00 [xfs-log/xvda3]
+root         575  0.0  0.0      0     0 ?        I<   04:19   0:00 [xfs-cil/xvda3]
+root         576  0.0  0.0      0     0 ?        S    04:19   0:00 [xfsaild/xvda3]
+root         612  0.0  0.5  18092  4360 ?        S<sl 04:19   0:00 /sbin/auditd
+dbus         641  0.0  0.5  10820  4552 ?        Ss   04:19   0:00 /usr/bin/dbus-broker-launch --scope system --audit
+dbus         645  0.0  0.3   5152  2828 ?        S    04:19   0:00 dbus-broker --log 4 --controller 9 --machine-id dbf870c5888b483f8207
+root         649  0.0  1.4  20368 10992 ?        Ss   04:19   0:00 /usr/lib/systemd/systemd-logind
+chrony       655  0.0  0.3  10380  2324 ?        S    04:19   0:00 /usr/sbin/chronyd -F 2
+root         684  0.0  2.7 257260 21440 ?        Ssl  04:19   0:00 /usr/sbin/NetworkManager --no-daemon
+root         701  0.0  3.6 256260 28428 ?        Ssl  04:19   0:01 /usr/bin/python3 -Es /usr/sbin/tuned -l -P
+root         702  0.0  0.5  81056  4212 ?        Ssl  04:19   0:00 /usr/bin/rhsmcertd
+polkitd      952  0.0  2.9 2576948 22700 ?       Ssl  04:19   0:00 /usr/lib/polkit-1/polkitd --no-debug
+root        1015  0.0  0.5 160272  4284 ?        Ssl  04:19   0:00 /usr/sbin/rsyslogd -n
+root        1019  0.0  0.4   8548  3668 ?        Ss   04:19   0:00 /usr/sbin/crond -n
+root        1020  0.0  0.1   3044  1064 tty1     Ss+  04:19   0:00 /sbin/agetty -o -p -- \u --noclear - linux
+root        1021  0.0  0.1   5612  1092 ttyS0    Ss+  04:19   0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+root        1288  0.0  1.2  15792  9312 ?        Ss   04:19   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root        3957  0.0  1.4  19140 11536 ?        Ss   04:20   0:00 sshd: ec2-user [priv]
+ec2-user    3963  0.0  1.7  22220 13568 ?        Ss   04:20   0:00 /usr/lib/systemd/systemd --user
+ec2-user    3965  0.0  0.7 107952  5472 ?        S    04:20   0:00 (sd-pam)
+ec2-user    3972  0.0  0.9  19140  7128 ?        S    04:20   0:00 sshd: ec2-user@pts/0
+ec2-user    3973  0.0  0.5   7488  4228 pts/0    Ss   04:20   0:00 -bash
+root        4115  0.0  0.0      0     0 ?        I<   04:40   0:00 [tls-strp]
+root        4575  0.0  0.0      0     0 ?        I    06:43   0:00 [kworker/0:0-events]
+root        4590  0.0  1.4  18988 11560 ?        Ss   06:49   0:00 sshd: ec2-user [priv]
+ec2-user    4593  0.0  0.9  19192  7148 ?        S    06:49   0:00 sshd: ec2-user@pts/1
+ec2-user    4594  0.0  0.5   7388  4224 pts/1    Ss   06:49   0:00 -bash
+root        4635  0.0  0.0      0     0 ?        I    06:49   0:00 [kworker/0:2-cgroup_destroy]
+root        4639  0.0  1.1  19464  8692 pts/0    S    06:50   0:00 sudo su - root
+root        4641  0.0  0.8  15464  6404 pts/0    S    06:50   0:00 su - root
+root        4642  0.0  0.5   7388  4200 pts/0    S    06:50   0:00 -bash
+root        4668  0.0  0.0      0     0 ?        I    06:51   0:00 [kworker/u30:2-events_unbound]
+ec2-user    4712  0.0  0.1   5724  1024 pts/1    S+   06:59   0:00 cat
+root        4732  0.0  0.0      0     0 ?        I    07:01   0:00 [kworker/0:1-cgroup_destroy]
+root        4738  0.0  0.8  18056  6200 pts/0    R+   07:03   0:00 ps -aux
+[root@ip-172-31-45-136 ~]#
+[root@ip-172-31-45-136 ~]# man pstree
+[root@ip-172-31-45-136 ~]# ps -u ec2-user
+    PID TTY          TIME CMD
+   3963 ?        00:00:00 systemd
+   3965 ?        00:00:00 (sd-pam)
+   3972 ?        00:00:00 sshd
+   3973 pts/0    00:00:00 bash
+   4593 ?        00:00:00 sshd
+   4594 pts/1    00:00:00 bash
+[root@ip-172-31-45-136 ~]# top
+top - 07:07:09 up  2:47,  2 users,  load average: 0.00, 0.00, 0
+Tasks: 105 total,   1 running, 104 sleeping,   0 stopped,   0 z
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,
+MiB Mem :    754.0 total,    171.2 free,    275.6 used,    426.
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.    478.
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM
+     15 root      20   0       0      0      0 S   0.3   0.0
+      1 root      20   0  172100  16292  10888 S   0.0   2.1
+      2 root      20   0       0      0      0 S   0.0   0.0
+      3 root       0 -20       0      0      0 I   0.0   0.0
+      4 root       0 -20       0      0      0 I   0.0   0.0
+      5 root       0 -20       0      0      0 I   0.0   0.0
+      6 root       0 -20       0      0      0 I   0.0   0.0
+      8 root       0 -20       0      0      0 I   0.0   0.0
+      9 root      20   0       0      0      0 I   0.0   0.0
+     10 root       0 -20       0      0      0 I   0.0   0.0
+     12 root      20   0       0      0      0 I   0.0   0.0
+     13 root      20   0       0      0      0 I   0.0   0.0
+     14 root      20   0       0      0      0 I   0.0   0.0
+     16 root      20   0       0      0      0 S   0.0   0.0
+     17 root      20   0       0      0      0 S   0.0   0.0
+     18 root      20   0       0      0      0 I   0.0   0.0
+     19 root      rt   0       0      0      0 S   0.0   0.0
+     20 root     -51   0       0      0      0 S   0.0   0.0
+     22 root      20   0       0      0      0 S   0.0   0.0
+     24 root      20   0       0      0      0 S   0.0   0.0
+     25 root       0 -20       0      0      0 I   0.0   0.0
+     26 root      20   0       0      0      0 S   0.0   0.0
+     27 root      20   0       0      0      0 S   0.0   0.0
+     29 root      20   0       0      0      0 S   0.0   0.0
+     30 root       0 -20       0      0      0 I   0.0   0.0
+     31 root      20   0       0      0      0 S   0.0   0.0
+     32 root      25   5       0      0      0 S   0.0   0.0
+     33 root      39  19       0      0      0 S   0.0   0.0
+     34 root       0 -20       0      0      0 I   0.0   0.0
+     35 root       0 -20       0      0      0 I   0.0   0.0
+[root@ip-172-31-45-136 ~]# top
+top - 07:07:15 up  2:47,  2 users,  load average: 0.00, 0.00, 0
+Tasks: 105 total,   1 running, 104 sleeping,   0 stopped,   0 z
+%Cpu(s):  0.3 us,  0.0 sy,  0.0 ni, 99.7 id,  0.0 wa,  0.0 hi,
+MiB Mem :    754.0 total,    171.2 free,    275.6 used,    426.
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.    478.
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM
+      1 root      20   0  172100  16292  10888 S   0.0   2.1
+      2 root      20   0       0      0      0 S   0.0   0.0
+      3 root       0 -20       0      0      0 I   0.0   0.0
+      4 root       0 -20       0      0      0 I   0.0   0.0
+      5 root       0 -20       0      0      0 I   0.0   0.0
+      6 root       0 -20       0      0      0 I   0.0   0.0
+      8 root       0 -20       0      0      0 I   0.0   0.0
+      9 root      20   0       0      0      0 I   0.0   0.0
+     10 root       0 -20       0      0      0 I   0.0   0.0
+     12 root      20   0       0      0      0 I   0.0   0.0
+     13 root      20   0       0      0      0 I   0.0   0.0
+     14 root      20   0       0      0      0 I   0.0   0.0
+     15 root      20   0       0      0      0 S   0.0   0.0
+     16 root      20   0       0      0      0 S   0.0   0.0
+     17 root      20   0       0      0      0 S   0.0   0.0
+     18 root      20   0       0      0      0 I   0.0   0.0
+     19 root      rt   0       0      0      0 S   0.0   0.0
+     20 root     -51   0       0      0      0 S   0.0   0.0
+     22 root      20   0       0      0      0 S   0.0   0.0
+     24 root      20   0       0      0      0 S   0.0   0.0
+     25 root       0 -20       0      0      0 I   0.0   0.0
+     26 root      20   0       0      0      0 S   0.0   0.0
+     27 root      20   0       0      0      0 S   0.0   0.0
+     29 root      20   0       0      0      0 S   0.0   0.0
+     30 root       0 -20       0      0      0 I   0.0   0.0
+     31 root      20   0       0      0      0 S   0.0   0.0
+     32 root      25   5       0      0      0 S   0.0   0.0
+     33 root      39  19       0      0      0 S   0.0   0.0
+     34 root       0 -20       0      0      0 I   0.0   0.0
+     35 root       0 -20       0      0      0 I   0.0   0.0
+[root@ip-172-31-45-136 ~]#
+[root@ip-172-31-45-136 ~]# top -u ec2-user
+top - 07:09:51 up  2:50,  2 users,  load average: 0.00, 0.00, 0.00
+Tasks: 105 total,   1 running, 104 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :    754.0 total,    171.1 free,    275.7 used,    426.7 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.    478.2 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+   3963 ec2-user  20   0   22220  13568  10532 S   0.0   1.8   0:00.06 systemd
+   3965 ec2-user  20   0  107952   5472      0 S   0.0   0.7   0:00.00 (sd-pam)
+   3972 ec2-user  20   0   19140   7128   5212 S   0.0   0.9   0:00.15 sshd
+   3973 ec2-user  20   0    7488   4228   3560 S   0.0   0.5   0:00.05 bash
+   4593 ec2-user  20   0   19192   7148   5236 S   0.0   0.9   0:00.00 sshd
+   4594 ec2-user  20   0    7388   4224   3564 S   0.0   0.5   0:00.00 bash
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@ip-172-31-45-136 ~]#
+[root@ip-172-31-45-136 ~]# top -u ec2-user
+top - 07:12:09 up  2:52,  2 users,  load average: 0.06, 0.01, 0.00
+Tasks: 106 total,   1 running, 105 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :    754.0 total,    170.6 free,    276.1 used,    426.8 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.    477.9 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+   3963 ec2-user  20   0   22220  13568  10532 S   0.0   1.8   0:00.06 systemd
+   3965 ec2-user  20   0  107952   5472      0 S   0.0   0.7   0:00.00 (sd-pam)
+   3973 ec2-user  20   0    7488   4228   3560 S   0.0   0.5   0:00.05 bash
+   4593 ec2-user  20   0   19192   7148   5236 S   0.0   0.9   0:00.00 sshd
+   4594 ec2-user  20   0    7388   4224   3564 S   0.0   0.5   0:00.00 bash
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@ip-172-31-45-136 ~]#
+[root@ip-172-31-45-136 ~]#
+

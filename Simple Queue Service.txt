@@ -1,0 +1,141 @@
+Simple Queue Service (SQS) is a fully managed message queuing service offered by Amazon Web Services (AWS). It allows developers to decouple applications and services,
+ enabling asynchronous communication and reliable message processing.
+
+With SQS, you can:
+
+1. Send, store, and receive messages
+2. Decouple applications and services
+3. Process messages asynchronously
+4. Ensure message reliability and durability
+5. Scale queues as needed
+6. Integrate with other AWS services
+
+SQS provides two types of queues:
+
+1. Standard Queue: High throughput and best-effort ordering
+2. FIFO (First-In-First-Out) Queue: Guaranteed ordering and exactly-once processing
+
+SQS is a useful service for building distributed systems, processing workflows, and integrating microservices. It helps to:
+
+1. Improve system reliability
+2. Enhance scalability
+3. Reduce complexity
+4. Increase fault tolerance
+
+By using SQS, developers can build more robust and scalable applications, focusing on business logic rather than message infrastructure.
+
+ 14 june 2024
+# SNS -> simple notification service
+  it like a alert for someone, upto 10M sns free
+
+# create sns service
+  step 1: services -> application -> sns
+  step 2: enter topic any you want
+  step 3: click on create topic
+  step 4: select standard
+  step 5: enter name
+  step 6: enter display name if you want
+  step 7: right now skip other options
+  step 8: click on create
+  step 9: click on create subscription
+  step 10: choose any protocol (for now email)
+  step 11: enter emailid
+  step 12: click on create
+  step 13: go to gmail and confirm subscription, then status will be confirmed
+  step 14: go to topic
+  step 15: create the mail
+  step 16: enter name, and choose TTL (if you want msg show for specific time only then use TTL)
+  step 17: enter msg in msg body
+  step 18: msg attributes if you want
+  step 19: click on publish
+
+
+# fifo only sql use , simple queue service
+# SES -> 
+  bulk email service
+
+# cloud watch
+  it is monitor performance of resources.
+  # alarm -> if we set any value and our permormance cross the limit they give us notification or take action.
+    logs
+    metrics -> to see performance of resources
+    x-ray traces -> if two service communicate and suddenly services stop communicating or break communication then we use x-ray
+    events -> known as amazon eventbridge. if we want to do any action suddenly so events is going to take action behalf of us. 
+
+# create a ec2 instance and monitor performace by cloudwatch, 
+  step 1: launch ec2 instance
+  step 2: we have to wait 10 mints
+  step 3: services -> management -> aws cloudwatch
+  step 4: go to metrics -> all metrics
+  step 5: choose service which u want to check
+  step 6: search name of instance or search by instance id
+  step 7: also see data in graphs 
+
+# create alarm
+   step 1: services -> management -> aws cloudwatch -> alarms
+   step 2: click on create alarm
+   step 3: click on select metrics
+   step 4: select service
+   step 5: click on per instance
+   step 6: search instance name or id
+   step 7: select metrics name (cpu utilized)
+   step 8: click on create
+   step 9: select statistic
+   step 10: period
+   step 11: select static in conditions
+   step 12: cpuutilized condition (greater)
+   step 13: select in alarm
+   step 14: selct an existing sns topic
+   step 15: choose sns
+   step 16: click on next
+   step 17: give alarm name 
+   step 18: click on next
+   step 19: click on create alarm
+   step 20: connect ec2 intsance with putty and check cpu utilized using top command
+   step 21: to increase cpu utilize --> yes > /dev/null & (only for practical)
+   step 22: check alarm, when alarm go to in alarm state it send the mail
+
+# 3 types of alarm
+  1. in alarm -> if condition true
+  2. ok -> if condition false
+  3. insufficiant data -> when it is in state to get latest data
+
+# AMI
+  types of AMI -> 1. quick 2. custom AMI (my ami) 3. marketplace 4. community
+
+# custom AMI
+  when ever we create custom AMI two things created -> AMI created and snapshot of EBS (HD)
+  the data of configration stored in hard disk
+  It is not under free tier.. it is costly.
+  if repat deployment we use my ami, in disaster recovery we also use my ami.
+
+# practical of custom AMI
+  step 1: launch ec2 instance and configure (using putty)
+  step 2: configure -> sudo yum intsall wget -y
+  step 3: go to directory cd/var/www/html/
+  step 4: sudo wget website link
+  step 5: sudo system
+  step 6: select ec2 instance and click on actions and click on image and templates -> click on create image
+  step 7: enter name and click on create img
+  step 8: left hand side images -> AMIs
+  step 8: wait to status turn into available
+  step 9: meanwhile check about snapshot left hand side elastic block store -> snapshot 
+  step 10: when image ami and snapshot in available state delete ec2 instance existing
+  step 11: launch new ec2 instance and select your ami from my ami option
+  step 12: copy public ip and paste in browser or search engine.
+
+# launch template
+  when we want to create instance again and again we use launch template. It is under free tier. 
+
+# practical
+  step 1: instances -> launch templates
+  step 2: enter name , discription(if want), enable scalling checkbox(if want), choose source template(if you want use existing instances),choose ami, key pair, micro family, security group, storage , tags, 
+  step 3: click on create launch templates
+  step 4: for use launch templates -> go to instances in launch instance button there is drop down button click on it and select launch templates.
+
+# delete all ami and instances
+  in ami there is option deregister to delete ami,
+  snapshot not coverd in free tier,
+  delete all ec2 instances
+  delete all instance templates
+  delete AMI and snapshot

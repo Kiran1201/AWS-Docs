@@ -1,0 +1,182 @@
+Permissions 
+----------------
+
+It is a deciding factor for authorization (access) over files/directories in order to read , write and execute is called as permissions .
+
+
+---> File Permissions 
+
+
+1. read (r) :- To view the file or accessing the content of the file. Eg:- cat
+2. write (w) :- To write the content of the file or overwriting the file . Eg :- vi , > , gedit, nano etc.
+3. execute (x) :- To run a file/programs we require execute permissions .
+
+
+2 methods to change the permissions 
+
+1. Octal Method 
+2. Symbolic Method ( ugo method )
+
+
+
+				-     		rw-    			r--   			r--
+
+			File Type             Owner's                  Group's                Other's 
+					     Permission               Permission              Permission
+
+
+---> Octal Method 
+
+r = 4
+w = 2 
+x = 1
+- = 0 
+
+
+Eg :- -rw-r--r--
+
+		rw-			r--			r--
+
+
+rw- = 4 + 2 + 0 = 6
+r-- = 4 + 0 + 0 = 4
+r-- = 4 + 0 + 0 = 4
+
+rw-r--r-- = 644
+
+
+Eg :-  -rw-rwxr-x
+
+	rw-		rwx		r-x
+
+rw- = 4 + 2 + 0 = 6
+rwx = 4 + 2 + 1 = 7
+r-x = 4 + 0 + 1 = 5
+
+rw-rwxr-x = 675
+
+Questions 
+
+1. -rwxr----x  = 741
+2. -r--r--r--  = 444
+3. --w--w--w-  = 222
+4. -rwxrwxrwx  = 777
+5. ----r-----  = 040
+6. -rwx---rwx  = 707
+7. -r--rwxrwx  = 477
+8. ----------  = 000
+9. ---x--x--x  = 111
+10. --wx-wx-wx = 333
+
+
+chmod <Permission Value>  <file/dir>
+
+
+---------> Symbolic Method (ugo method)
+
+u= owner 
+g= group
+o = other 
+
+Eg:- -rw-rwxr--
+
+
+	rw-			rwx		r--
+
+
+u=rw
+g=rwx
+o=r
+
+chmod u=rw,g=rwx,o=r <file/dir>
+
+Eg:- -r-x-wx--x
+
+	r-x		-wx		--x
+
+u=rx
+g= wx
+o = x
+
+chmod u=rx,g=wx,o=x <file/dir>
+
+
+
+
+
+------------------------------------------------------------------------------------------
+Directory Permissions 
+-----------------
+
+1. read (r) :- To see the content of the directory we use read permissions . Eg:- ls
+2. write (w) :- To create or delete the files and sub-directories inside the directories . Eg :- touch , cat > , mkdir , rm 
+3. execute (x) :- To traverse in the directory we require execute permissions . Eg :- cd 
+
+2 methods to change permissions :- 
+
+1. Octal Method 
+2. Symbolic Method ( ugo method)
+
+
+				d		  rwx			r-x			r-x
+
+			   File Type             Owner's                  Group's                Other's 
+					        Permission               Permission              Permission
+
+---> Octal Method
+
+r=4
+w=2
+x=1
+- = 0
+
+Eg :- drwxr-x-wx
+
+	rwx		r-x		-wx
+
+rwx = 4 + 2 + 1 = 7
+r-x = 4 + 0 + 1 = 5
+-wx = 0 + 2 + 1 = 3
+
+drwxr-x-wx = 753
+
+
+Questions 
+----------
+
+1. drwxrwxrwx = 777
+2. drw-rwx--x = 671
+3. dr--r----x = 441
+4. drwx------ = 700
+5. d--------- = 000
+6. dr---w---x = 421
+
+
+chmod <permission> <dir>
+
+
+---> Symbolic Method ( ugo method )
+
+u = owner 
+g = groups 
+o = others 
+
+Eg :- drwxr-x-wx
+
+	rwx		r-x		-wx
+
+ 
+
+u=rwx
+g=rx
+o=wx
+
+chmod u=rwx,g=rx,o=wx  <file/dir>
+
+Questions 
+
+1. drw--w---x = chmod u=rw,g=w,o=x <dir>
+2. dr-xr-xrw- = chmod u=rx,g=rx,o=rw <dir>
+3. drw-rw-rw- = chmod u=rw,g=rw,o=rw <dir>
+
+----------------------------------------------------END---------------------------------		

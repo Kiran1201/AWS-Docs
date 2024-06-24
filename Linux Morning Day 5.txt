@@ -1,0 +1,157 @@
+Using username "ec2-user".
+Authenticating with public key "imported-openssh-key"
+Register this system with Red Hat Insights: insights-client --register
+Create an account or view all your systems at https://red.ht/insights-dashboard
+[ec2-user@ip-172-31-17-163 ~]$ cat > hello.txt
+Hey
+Im Fine
+Bye Bye
+[ec2-user@ip-172-31-17-163 ~]$ cat hello.txt
+Hey
+Im Fine
+Bye Bye
+[ec2-user@ip-172-31-17-163 ~]$ #Text Editors
+[ec2-user@ip-172-31-17-163 ~]$
+[ec2-user@ip-172-31-17-163 ~]$ nano
+-bash: nano: command not found
+[ec2-user@ip-172-31-17-163 ~]$ sudo yum install nano  -y
+Updating Subscription Management repositories.
+Unable to read consumer identity
+
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+
+Red Hat Enterprise Linux 9 for x86_64 - AppStream from RHUI (RPMs)                                      43 MB/s |  34 MB     00:00
+Red Hat Enterprise Linux 9 for x86_64 - BaseOS from RHUI (RPMs)                                         40 MB/s |  20 MB     00:00
+Red Hat Enterprise Linux 9 Client Configuration                                                         21 kB/s | 2.6 kB     00:00
+Dependencies resolved.
+=======================================================================================================================================
+ Package                  Architecture               Version                         Repository                                   Size
+=======================================================================================================================================
+Installing:
+ nano                     x86_64                     5.6.1-5.el9                     rhel-9-baseos-rhui-rpms                     714 k
+
+Transaction Summary
+=======================================================================================================================================
+Install  1 Package
+
+Total download size: 714 k
+Installed size: 2.7 M
+Downloading Packages:
+nano-5.6.1-5.el9.x86_64.rpm                                                                             14 MB/s | 714 kB     00:00
+---------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                  8.6 MB/s | 714 kB     00:00
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                               1/1
+  Installing       : nano-5.6.1-5.el9.x86_64                                                                                       1/1
+  Running scriptlet: nano-5.6.1-5.el9.x86_64                                                                                       1/1
+  Verifying        : nano-5.6.1-5.el9.x86_64                                                                                       1/1
+Installed products updated.
+
+Installed:
+  nano-5.6.1-5.el9.x86_64
+
+Complete!
+[ec2-user@ip-172-31-17-163 ~]$
+[ec2-user@ip-172-31-17-163 ~]$ ls
+hello.txt
+[ec2-user@ip-172-31-17-163 ~]$ nano myfirstfile.txt
+[ec2-user@ip-172-31-17-163 ~]$ cat myfirstfile.txt
+Hey
+Everyone
+This is Prasiddh
+Hope you are doing fine .
+[ec2-user@ip-172-31-17-163 ~]$ nano myfirstfile.txt
+[ec2-user@ip-172-31-17-163 ~]$ nano myfirstfile.txt
+[ec2-user@ip-172-31-17-163 ~]$ cat myfirstfile.txt
+Hey
+Everyone
+This is Prasiddh
+Hope you are doing fine .
+Because i am
+I am very sleepyyy
+Really messed up
+Prasiddh is mentally abnormal.
+[ec2-user@ip-172-31-17-163 ~]$ nano myfirstfile.txt
+[ec2-user@ip-172-31-17-163 ~]$
+[ec2-user@ip-172-31-17-163 ~]$ nano
+[ec2-user@ip-172-31-17-163 ~]$ nano
+[ec2-user@ip-172-31-17-163 ~]$ nano
+[ec2-user@ip-172-31-17-163 ~]$
+[ec2-user@ip-172-31-17-163 ~]$ man nano
+[ec2-user@ip-172-31-17-163 ~]$
+[ec2-user@ip-172-31-17-163 ~]$ vi vimfiles.txt
+[ec2-user@ip-172-31-17-163 ~]$ vi vimfiles.txt
+[ec2-user@ip-172-31-17-163 ~]$ cat vimfiles.txt
+Sadda Haq
+Joh Ruthe bhi toh
+na jaana abhi
+mein tera tha kal
+mein tera abhi.
+[ec2-user@ip-172-31-17-163 ~]$ vi vimfiles.txt
+[ec2-user@ip-172-31-17-163 ~]$ cat vimfiles.txt
+Sadda Haq
+Joh Ruthe bhi toh
+na jaana abhi
+mein tera tha kal
+mein tera abhi.
+[ec2-user@ip-172-31-17-163 ~]$ vi vimfiles.txt
+[ec2-user@ip-172-31-17-163 ~]$ cat vimfiles.txt
+Sadda Haq
+Jajajajajajajaj
+hahaha
+
+Joh Ruthe bhi toh
+na jaana abhi
+mein tera tha kal
+mein tera abhi.
+[ec2-user@ip-172-31-17-163 ~]$ vi vimfiles.txt
+[ec2-user@ip-172-31-17-163 ~]$ cat vimfiles.txt
+Sadda Haq
+Jajajajajajajaj
+hahaha
+hascbajscbjascvjcsajcashvajcsha
+kcabskasbckascbkacb
+
+Joh Ruthe bhi toh
+na jaana abhi
+mein tera tha kal
+mein tera abhi.
+[ec2-user@ip-172-31-17-163 ~]$
+[ec2-user@ip-172-31-17-163 ~]$ vi vimfiles.txt
+[ec2-user@ip-172-31-17-163 ~]$ cat vimfiles.txt
+Sadda Haq
+Jajajajajajajaj
+hahaha
+hascbajscbjascvjcsajcashvajcsha
+kcabskasbckascbkacb
+ ifbfwbefbwebfwebfkwbefkewb
+asdbjksadkasd
+Joh Ruthe bhi toh
+na jaana abhi
+mein tera tha kal
+mein tera abhi.
+[ec2-user@ip-172-31-17-163 ~]$
+[ec2-user@ip-172-31-17-163 ~]$ vi sohandoubt.txt
+[ec2-user@ip-172-31-17-163 ~]$ vi sohandoubt.txt
+[ec2-user@ip-172-31-17-163 ~]$ cat sohandoubt.txt
+Sohan , Hope your doubt is cleared ?
+
+jajajajjajajajbcsvucbsjcbajcjascxb
+xcazkxbaskbxajsbxjasbxjasbjx
+
+[ec2-user@ip-172-31-17-163 ~]$ cat sohandoubt.txt
+Sohan , Hope your doubt is cleared ?
+
+jajajajjajajajbcsvucbsjcbajcjascxb
+xcazkxbaskbxajsbxjasbxjasbjx
+
+[ec2-user@ip-172-31-17-163 ~]$ cat > sohandoubt.txt
+[ec2-user@ip-172-31-17-163 ~]$ cat sohandoubt.txt
+[ec2-user@ip-172-31-17-163 ~]$ cat > sohandoubt.txt
+[ec2-user@ip-172-31-17-163 ~]$ cat sohandoubt.txt
+[ec2-user@ip-172-31-17-163 ~]$ man vi
+[ec2-user@ip-172-31-17-163 ~]$

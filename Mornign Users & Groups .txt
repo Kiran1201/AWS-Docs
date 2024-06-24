@@ -1,0 +1,39 @@
+Users & Groups 
+-------------------
+
+---> Users :- It is an interactive entity which interacts with the  OS based on the level of permission the entity has.
+
+ Types of Users :-
+
+1. Admin User / Root :- If you want to perform system level tasks and get complete control of the system. 
+2. Power User :- If the admin / root user is unavailable so we use power user in order to get complete control of the system.
+3. System User / Daemon User :- It is required to run background tasks and provide stability to the OS. You can not login as 				daemon users . No interactions with commands.
+4. Normal User / End User :- It is used to perform day to day operations.
+5. Guest User :- It is known as temporary users. They will have the lowest possible permissions  
+
+
+Users in Linux :-
+
+1. useradd :- It is used to create a user. Normal User is created by default.
+
+	Important File :-  /etc/passwd :- It contains user's information.
+
+2. su :- It is used to change your user.
+
+3. passwd :- It allows you to setup the password for the user. 
+
+4. usermod :- It is used to modify existing user account .
+
+5. userdel :- It is used to delete the user.
+
+
+Groups in Linux :- Collections of users , required to have same set of permissions then we create a group
+
+1. groupadd :- It is used to create a group .
+
+	Important File :- /etc/group ---> It contains group information 
+
+2. usermod 
+
+3. groupdel 
+

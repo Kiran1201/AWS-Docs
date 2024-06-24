@@ -1,0 +1,576 @@
+login as: ec2-user
+Authenticating with public key "imported-openssh-key"
+Register this system with Red Hat Insights: insights-client --register
+Create an account or view all your systems at https://red.ht/insights-dashboard
+[ec2-user@ip-172-31-18-220 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-18-220 ~]$ mkdir zebra
+[ec2-user@ip-172-31-18-220 ~]$ mkdir zebra/peacock
+[ec2-user@ip-172-31-18-220 ~]$ touch zebra/monkey.txt
+[ec2-user@ip-172-31-18-220 ~]$ touch zebra/peacock/beautiful.txt
+[ec2-user@ip-172-31-18-220 ~]$ touch zebra/peacock/dance.txt
+[ec2-user@ip-172-31-18-220 ~]$ mkdir hacking
+[ec2-user@ip-172-31-18-220 ~]$ touch hacking/xss.txt
+[ec2-user@ip-172-31-18-220 ~]$ touch hacking/csrf.txt
+[ec2-user@ip-172-31-18-220 ~]$ mkdir hacking/ssrf
+[ec2-user@ip-172-31-18-220 ~]$ mkdir hacking/ssrf/errorbased
+[ec2-user@ip-172-31-18-220 ~]$ touch hacking/ssrf/blind.txt
+[ec2-user@ip-172-31-18-220 ~]$ mkdir bugs
+[ec2-user@ip-172-31-18-220 ~]$ mkdir bugs/SQLi
+[ec2-user@ip-172-31-18-220 ~]$ touch bugs/authzero.txt
+[ec2-user@ip-172-31-18-220 ~]$ ls -R zebra hacking bugs
+bugs:
+authzero.txt  SQLi
+
+bugs/SQLi:
+
+hacking:
+csrf.txt  ssrf  xss.txt
+
+hacking/ssrf:
+blind.txt  errorbased
+
+hacking/ssrf/errorbased:
+
+zebra:
+monkey.txt  peacock
+
+zebra/peacock:
+beautiful.txt  dance.txt
+[ec2-user@ip-172-31-18-220 ~]$
+[ec2-user@ip-172-31-18-220 ~]$ rm -r *
+[ec2-user@ip-172-31-18-220 ~]$
+[ec2-user@ip-172-31-18-220 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-18-220 ~]$ mkdir cricket
+[ec2-user@ip-172-31-18-220 ~]$ touch cricket/allofusaredead.txt
+[ec2-user@ip-172-31-18-220 ~]$ mkdir cricket/lapataladies
+[ec2-user@ip-172-31-18-220 ~]$ touch cricket/lapataladies/12thfail.txt
+[ec2-user@ip-172-31-18-220 ~]$ mkdir lordofrings
+[ec2-user@ip-172-31-18-220 ~]$ touch lordofrings/cars.txt
+[ec2-user@ip-172-31-18-220 ~]$ mkdir lordofrings/berlin
+[ec2-user@ip-172-31-18-220 ~]$ touch lordofrings/berlin/shershah.txt
+[ec2-user@ip-172-31-18-220 ~]$ mkdir missionimpossible
+[ec2-user@ip-172-31-18-220 ~]$ mkdir missionimpossible/agenthunt
+[ec2-user@ip-172-31-18-220 ~]$ mkdir missionimpossible/spiderman
+[ec2-user@ip-172-31-18-220 ~]$ touch missionimpossible/agenthunt/avengers.txt
+[ec2-user@ip-172-31-18-220 ~]$ touch missionimpossible/spiderman/theboys.txt
+[ec2-user@ip-172-31-18-220 ~]$ mkdir badeachelgtehain
+[ec2-user@ip-172-31-18-220 ~]$ touch badeachelgtehain/evildead.txt
+[ec2-user@ip-172-31-18-220 ~]$ mkdir badeachelgtehain/k3g
+[ec2-user@ip-172-31-18-220 ~]$ mkdir badeachelgtehain/gangsofwasseypur
+[ec2-user@ip-172-31-18-220 ~]$ touch badeachelgtehain/k3g/kabhisaasbhibahuthi.txt
+[ec2-user@ip-172-31-18-220 ~]$ touch badeachelgtehain/k3g/balikavadhu.txt
+[ec2-user@ip-172-31-18-220 ~]$
+[ec2-user@ip-172-31-18-220 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-18-220 ~]$ cd ..
+[ec2-user@ip-172-31-18-220 home]$ pwd
+/home
+[ec2-user@ip-172-31-18-220 home]$ cd ..
+[ec2-user@ip-172-31-18-220 /]$ pwd
+/
+[ec2-user@ip-172-31-18-220 /]$ cd ..
+[ec2-user@ip-172-31-18-220 /]$ pwd
+/
+[ec2-user@ip-172-31-18-220 /]$ ls -l
+total 24
+dr-xr-xr-x.   2 root root    6 Aug  9  2021 afs
+lrwxrwxrwx.   1 root root    7 Aug  9  2021 bin -> usr/bin
+dr-xr-xr-x.   5 root root 4096 May  6 04:37 boot
+drwxr-xr-x.  18 root root 2820 May  6 04:37 dev
+drwxr-xr-x.   2 root root    0 May  6 04:37 efi
+drwxr-xr-x.  88 root root 8192 May  6 05:39 etc
+drwxr-xr-x.   3 root root   22 May  6 04:37 home
+lrwxrwxrwx.   1 root root    7 Aug  9  2021 lib -> usr/lib
+lrwxrwxrwx.   1 root root    9 Aug  9  2021 lib64 -> usr/lib64
+drwxr-xr-x.   2 root root    6 Aug  9  2021 media
+drwxr-xr-x.   2 root root    6 Aug  9  2021 mnt
+drwxr-xr-x.   2 root root    6 Aug  9  2021 opt
+dr-xr-xr-x. 160 root root    0 May  6 04:37 proc
+dr-xr-x---.   3 root root  103 Jan 17 18:50 root
+drwxr-xr-x.  29 root root  840 May  6 04:37 run
+lrwxrwxrwx.   1 root root    8 Aug  9  2021 sbin -> usr/sbin
+drwxr-xr-x.   2 root root    6 Aug  9  2021 srv
+dr-xr-xr-x.  13 root root    0 May  6 04:37 sys
+drwxrwxrwt.  10 root root 4096 May  6 06:12 tmp
+drwxr-xr-x.  12 root root  144 Jan 17 18:50 usr
+drwxr-xr-x.  19 root root 4096 May  6 04:37 var
+[ec2-user@ip-172-31-18-220 /]$ cd /bin
+[ec2-user@ip-172-31-18-220 bin]$
+[ec2-user@ip-172-31-18-220 bin]$ ls
+'['                                   gtroff                 objdump                    sg_write_same
+ addr2line                            gunzip                 od                         sg_write_verify
+ alias                                gzexe                  oddjob_request             sg_write_x
+ apropos                              gzip                   openssl                    sg_wr_mode
+ apropos.man-db                       hardlink               openvt                     sg_xcopy
+ ar                                   hash                   os-prober                  sg_zone
+ arch                                 head                   p11-kit                    sh
+ arping                               hexdump                package-cleanup            sha1hmac
+ as                                   hostid                 page_owner_sort            sha1sum
+ audit2allow                          hostname               passwd                     sha224hmac
+ audit2why                            hostnamectl            paste                      sha224sum
+ aulast                               i386                   pathchk                    sha256hmac
+ aulastlog                            iconv                  peekfd                     sha256sum
+ ausyscall                            id                     pflags                     sha384hmac
+ authselect                           idiag-socket-details   pgrep                      sha384sum
+ auvirt                               iio_event_monitor      pic                        sha512hmac
+ awk                                  iio_generic_buffer     pidof                      sha512sum
+ b2sum                                infocmp                pidwait                    showconsolefont
+ base32                               infotocap              pigz                       showkey
+ base64                               insights-client        ping                       shred
+ basename                             install                pinky                      shuf
+ basenc                               intel-speed-select     pkaction                   size
+ bash                                 ionice                 pkcheck                    skill
+ bashbug                              ipcalc                 pkexec                     slabinfo
+ bashbug-64                           ipcmk                  pkill                      slabtop
+ bg                                   ipcrm                  pkla-admin-identities      sleep
+ bond2team                            ipcs                   pkla-check-authorization   snice
+ bootctl                              irqtop                 pkttyagent                 soelim
+ busctl                               isosize                pldd                       soelim.groff
+ cal                                  jcat-tool              pmap                       sort
+ ca-legacy                            jobs                   post-grohtml               sotruss
+ captoinfo                            join                   powernow-k8-decode         split
+ cat                                  journalctl             pr                         sprof
+ catchsegv                            jsondiff               preconv                    ssh
+ catman                               jsondiff-3             pre-grohtml                ssh-add
+ cd                                   jsondiff-3.9           printenv                   ssh-agent
+ centrino-decode                      jsonpatch              printf                     ssh-copy-id
+ c++filt                              jsonpatch-3            prlimit                    ssh-keygen
+ chacl                                jsonpatch-3.9          prtstat                    ssh-keyscan
+ chage                                jsonpointer            ps                         sss_ssh_authorizedkeys
+ chardetect                           jsonpointer-3          psfaddtable                sss_ssh_knownhostsproxy
+ chattr                               jsonpointer-3.9        psfgettable                stat
+ chcat                                jsonschema             psfstriptable              stdbuf
+ chcon                                kbdinfo                psfxtable                  strings
+ checkmodule                          kbd_mode               pslog                      strip
+ checkpolicy                          kbdrate                pstree                     stty
+ chgrp                                kdumpctl               pstree.x11                 su
+ chmem                                kernel-install         ptx                        subscription-manager
+ chmod                                kill                   pwd                        sudo
+ choom                                killall                pwdx                       sudoedit
+ chown                                kmod                   pwmake                     sudoreplay
+ chronyc                              kvm_stat               pwscore                    sum
+ chrt                                 last                   pydoc                      sync
+ chvt                                 lastb                  pydoc3                     systemctl
+ cksum                                lastlog                pydoc3.9                   systemd-analyze
+ clear                                lchfn                  pyinotify                  systemd-ask-password
+ clockdiff                            lchsh                  python                     systemd-cat
+ cloud-id                             ld                     python3                    systemd-cgls
+ cloud-init                           ld.bfd                 python3.9                  systemd-cgtop
+ cloud-init-per                       ldd                    ranlib                     systemd-creds
+ cmp                                  ld.gold                rct                        systemd-cryptenroll
+ col                                  ld.so                  read                       systemd-delta
+ colcrt                               less                   readelf                    systemd-detect-virt
+ colrm                                lessecho               readlink                   systemd-dissect
+ column                               lesskey                realpath                   systemd-escape
+ comm                                 lesspipe.sh            recode-sr-latin            systemd-firstboot
+ command                              lexgrog                redhat-access-insights     systemd-hwdb
+ consolehelper                        link                   rename                     systemd-id128
+ coredumpctl                          linux32                renew-dummy-cert           systemd-inhibit
+ cp                                   linux64                renice                     systemd-machine-id-setup
+ cpio                                 linux-boot-prober      repoclosure                systemd-mount
+ cpupower                             ln                     repodiff                   systemd-notify
+ cronnext                             loadkeys               repo-graph                 systemd-path
+ crontab                              loadunimap             repomanage                 systemd-repart
+ csplit                               locale                 repoquery                  systemd-run
+ curl                                 localectl              reposync                   systemd-socket-activate
+ cut                                  localedef              repotrack                  systemd-stdio-bridge
+ cvtsudoers                           logger                 rescan-scsi-bus.sh         systemd-sysext
+ cyrusbdb2current                     login                  reset                      systemd-sysusers
+ date                                 loginctl               resizecons                 systemd-tmpfiles
+ dbus-broker                          logname                rev                        systemd-tty-ask-password-agent
+ dbus-broker-launch                   look                   rhc                        systemd-umount
+ dbus-monitor                         ls                     rhsmcertd                  tabs
+ dbus-send                            lsattr                 rhsm-debug                 tac
+ dbus-update-activation-environment   lsblk                  rhui-eus-switch            tail
+ dbus-uuidgen                         lscpu                  rhui-set-release           tar
+ dbxtool                              lsgpio                 rm                         taskset
+ dd                                   lsiio                  rmdir                      tbl
+ deallocvt                            lsinitrd               rpm                        team2bond
+ debuginfod-find                      lsipc                  rpm2archive                teamd
+ debuginfo-install                    lsirq                  rpm2cpio                   teamdctl
+ df                                   lslocks                rpmdb                      teamnl
+ dfu-tool                             lslogins               rpmkeys                    tee
+ diff                                 lsmem                  rpmquery                   test
+ diff3                                lsns                   rpmverify                  tic
+ dir                                  lsscsi                 rsync                      timedatectl
+ dircolors                            make-dummy-cert        rsync-ssl                  timeout
+ dirmngr                              man                    runcon                     tload
+ dirmngr-client                       mandb                  run-parts                  tmon
+ dirname                              man.man-db             rvi                        toe
+ distro                               manpath                rview                      top
+ dmesg                                man-recode             scp                        touch
+ dnf                                  mapscrn                script                     tput
+ dnf-3                                mcookie                scriptlive                 tr
+ dnsdomainname                        md5sum                 scriptreplay               tracepath
+ domainname                           mesg                   scsi_logging_level         troff
+ dracut                               miniterm-3.9.py        scsi_mandat                true
+ du                                   miniterm-3.py          scsi_readcap               truncate
+ dumpkeys                             miniterm.py            scsi_ready                 trust
+ dwp                                  mkdir                  scsi-rescan                tset
+ echo                                 mkfifo                 scsi_satl                  tsort
+ egrep                                mknod                  scsi_start                 tty
+ eject                                mktemp                 scsi_stop                  turbostat
+ elfedit                              mmdblookup             scsi_temperature           type
+ env                                  modulemd-validator     sdiff                      tzselect
+ envsubst                             mokutil                secon                      udevadm
+ eqn                                  more                   sed                        udisksctl
+ evmctl                               mount                  sedismod                   ul
+ ex                                   mountpoint             sedispol                   ulimit
+ expand                               msgattrib              semodule_expand            umask
+ expr                                 msgcat                 semodule_link              umount
+ factor                               msgcmp                 semodule_package           unalias
+ fallocate                            msgcomm                semodule_unpackage         uname
+ false                                msgconv                seq                        uname26
+ fc                                   msgen                  sestatus                   unexpand
+ fg                                   msgexec                setarch                    unicode_start
+ fgconsole                            msgfilter              setfacl                    unicode_stop
+ fgrep                                msgfmt                 setfont                    uniq
+ file                                 msggrep                setkeycodes                unlink
+ fincore                              msginit                setleds                    unpigz
+ find                                 msgmerge               setmetamode                unshare
+ findmnt                              msgunfmt               setpriv                    unxz
+ find-repos-of-install                msguniq                setsid                     update-ca-trust
+ fips-finish-install                  mv                     setterm                    update-crypto-policies
+ fips-mode-setup                      namei                  setup-nsssysinit           update-mime-database
+ flock                                ndptool                setup-nsssysinit.sh        uptime
+ fmt                                  needs-restarting       setvtrgb                   users
+ fold                                 neqn                   sftp                       usleep
+ free                                 newgidmap              sg                         utmpdump
+ fuse2fs                              newgrp                 sg_bg_ctl                  uuidgen
+ fwupdagent                           newuidmap              sg_compare_and_write       uuidparse
+ fwupdate                             nf-ct-add              sg_copy_results            vdir
+ fwupdmgr                             nf-ct-events           sg_dd                      vi
+ fwupdtool                            nf-ct-list             sg_decode_sense            view
+ g13                                  nf-exp-add             sg_emc_trespass            vlock
+ gapplication                         nf-exp-delete          sg_format                  vmstat
+ gawk                                 nf-exp-list            sg_get_config              w
+ gdbus                                nf-log                 sg_get_elem_status         wait
+ gencat                               nf-monitor             sg_get_lba_status          wall
+ genl-ctrl-list                       nf-queue               sg_ident                   watch
+ geqn                                 ngettext               sginfo                     watchgnupg
+ getconf                              nice                   sg_inq                     wc
+ getent                               nisdomainname          sg_logs                    wdctl
+ getfacl                              nl                     sg_luns                    whatis
+ getkeycodes                          nl-addr-add            sg_map                     whatis.man-db
+ getopt                               nl-addr-delete         sg_map26                   whereis
+ getopts                              nl-addr-list           sgm_dd                     which
+ gettext                              nl-class-add           sg_modes                   whiptail
+ gettext.sh                           nl-class-delete        sg_opcodes                 who
+ gio                                  nl-classid-lookup      sgp_dd                     whoami
+ gio-querymodules-64                  nl-class-list          sg_persist                 write
+ glib-compile-schemas                 nl-cls-add             sg_prevent                 x86_64
+ gneqn                                nl-cls-delete          sg_raw                     x86_energy_perf_policy
+ gnroff                               nl-cls-list            sg_rbuf                    xargs
+ gpasswd                              nl-fib-lookup          sg_rdac                    xb-tool
+ gpg                                  nl-link-enslave        sg_read                    xgettext
+ gpg2                                 nl-link-ifindex2name   sg_read_attr               xmlcatalog
+ gpg-agent                            nl-link-list           sg_read_block_limits       xmllint
+ gpg-card                             nl-link-name2ifindex   sg_read_buffer             xmlwf
+ gpgconf                              nl-link-release        sg_readcap                 xz
+ gpg-connect-agent                    nl-link-set            sg_read_long               xzcat
+ gpg-error                            nl-link-stats          sg_reassign                xzcmp
+ gpgme-json                           nl-list-caches         sg_referrals               xzdec
+ gpgparsemail                         nl-list-sockets        sg_rep_pip                 xzdiff
+ gpgsplit                             nl-monitor             sg_rep_zones               xzegrep
+ gpgtar                               nl-neigh-add           sg_requests                xzfgrep
+ gpgv                                 nl-neigh-delete        sg_reset                   xzgrep
+ gpgv2                                nl-neigh-list          sg_reset_wp                xzless
+ gpg-wks-client                       nl-neightbl-list       sg_rmsn                    xzmore
+ gpg-wks-server                       nl-pktloc-lookup       sg_rtpg                    yes
+ gpic                                 nl-qdisc-add           sg_safte                   ypdomainname
+ gpio-event-mon                       nl-qdisc-delete        sg_sanitize                yum
+ gpio-hammer                          nl-qdisc-list          sg_sat_identify            yum-builddep
+ gpio-watch                           nl-route-add           sg_sat_phy_event           yum-config-manager
+ gprof                                nl-route-delete        sg_sat_read_gplog          yum-debug-dump
+ grep                                 nl-route-get           sg_sat_set_features        yum-debug-restore
+ groff                                nl-route-list          sg_scan                    yumdownloader
+ grops                                nl-rule-list           sg_seek                    yum-groups-manager
+ grotty                               nl-tctree-list         sg_senddiag                zcat
+ groups                               nl-util-addr           sg_ses                     zcmp
+ growpart                             nm                     sg_ses_microcode           zdiff
+ grub2-editenv                        nmcli                  sg_start                   zdump
+ grub2-file                           nm-online              sg_stpg                    zegrep
+ grub2-menulst2cfg                    nmtui                  sg_stream_ctl              zfgrep
+ grub2-mkimage                        nmtui-connect          sg_sync                    zforce
+ grub2-mkpasswd-pbkdf2                nmtui-edit             sg_test_rwbuf              zgrep
+ grub2-mkrelpath                      nmtui-hostname         sg_timestamp               zless
+ grub2-mount                          nohup                  sg_turs                    zmore
+ grub2-script-check                   nproc                  sg_unmap                   znew
+ gsettings                            nroff                  sg_verify                  zsoelim
+ gsoelim                              nsenter                sg_vpd
+ gtar                                 numfmt                 sg_write_buffer
+ gtbl                                 objcopy                sg_write_long
+[ec2-user@ip-172-31-18-220 bin]$
+[ec2-user@ip-172-31-18-220 bin]$ cd /
+[ec2-user@ip-172-31-18-220 /]$ ls -l
+total 24
+dr-xr-xr-x.   2 root root    6 Aug  9  2021 afs
+lrwxrwxrwx.   1 root root    7 Aug  9  2021 bin -> usr/bin
+dr-xr-xr-x.   5 root root 4096 May  6 04:37 boot
+drwxr-xr-x.  18 root root 2820 May  6 04:37 dev
+drwxr-xr-x.   2 root root    0 May  6 04:37 efi
+drwxr-xr-x.  88 root root 8192 May  6 05:39 etc
+drwxr-xr-x.   3 root root   22 May  6 04:37 home
+lrwxrwxrwx.   1 root root    7 Aug  9  2021 lib -> usr/lib
+lrwxrwxrwx.   1 root root    9 Aug  9  2021 lib64 -> usr/lib64
+drwxr-xr-x.   2 root root    6 Aug  9  2021 media
+drwxr-xr-x.   2 root root    6 Aug  9  2021 mnt
+drwxr-xr-x.   2 root root    6 Aug  9  2021 opt
+dr-xr-xr-x. 160 root root    0 May  6 04:37 proc
+dr-xr-x---.   3 root root  103 Jan 17 18:50 root
+drwxr-xr-x.  29 root root  840 May  6 04:37 run
+lrwxrwxrwx.   1 root root    8 Aug  9  2021 sbin -> usr/sbin
+drwxr-xr-x.   2 root root    6 Aug  9  2021 srv
+dr-xr-xr-x.  13 root root    0 May  6 04:37 sys
+drwxrwxrwt.  10 root root 4096 May  6 06:24 tmp
+drwxr-xr-x.  12 root root  144 Jan 17 18:50 usr
+drwxr-xr-x.  19 root root 4096 May  6 04:37 var
+[ec2-user@ip-172-31-18-220 /]$ cd /etc
+[ec2-user@ip-172-31-18-220 etc]$
+[ec2-user@ip-172-31-18-220 etc]$ ls
+adjtime            DIR_COLORS.lightbgcolor  iproute2                  modprobe.d         rc3.d           subgid-
+aliases            dnf                      issue                     modules-load.d     rc4.d           subuid
+alternatives       dracut.conf              issue.d                   motd               rc5.d           subuid-
+anacrontab         dracut.conf.d            issue.net                 motd.d             rc6.d           sudo.conf
+audit              environment              kdump                     mtab               rc.d            sudoers
+authselect         ethertypes               kdump.conf                NetworkManager     rc.local        sudoers.d
+bash_completion.d  exports                  kernel                    networks           redhat-release  sudo-ldap.conf
+bashrc             filesystems              krb5.conf                 nsswitch.conf      resolv.conf     swid
+binfmt.d           fonts                    krb5.conf.d               nsswitch.conf.bak  rhc             sysconfig
+chkconfig.d        fstab                    ld.so.cache               oddjob             rhsm            sysctl.conf
+chrony.conf        fwupd                    ld.so.conf                oddjobd.conf       rpc             sysctl.d
+chrony.keys        gcrypt                   ld.so.conf.d              oddjobd.conf.d     rpm             systemd
+cifs-utils         gnupg                    libaudit.conf             openldap           rsyncd.conf     system-release
+cloud              GREP_COLORS              libblockdev               opt                rsyslog.conf    system-release-cpe
+cron.d             groff                    libibverbs.d              os-release         rsyslog.d       terminfo
+cron.daily         group                    libnl                     pam.d              rwtab.d         tmpfiles.d
+cron.deny          group-                   libreport                 passwd             sasl2           tpm2-tss
+cron.hourly        grub2.cfg                libssh                    passwd-            security        tuned
+cron.monthly       grub2-efi.cfg            libuser.conf              pkcs11             selinux         udev
+crontab            grub.d                   locale.conf               pki                services        udisks2
+cron.weekly        gshadow                  localtime                 pm                 sestatus.conf   vconsole.conf
+crypto-policies    gshadow-                 login.defs                polkit-1           shadow          virc
+csh.cshrc          gss                      logrotate.conf            popt.d             shadow-         X11
+csh.login          host.conf                logrotate.d               printcap           shells          xattr.conf
+dbus-1             hostname                 machine-id                profile            skel            xdg
+dconf              hosts                    magic                     profile.d          ssh             yum
+default            init.d                   makedumpfile.conf.sample  protocols          ssl             yum.conf
+depmod.d           inittab                  man_db.conf               rc0.d              sssd            yum.repos.d
+dhcp               inputrc                  microcode_ctl             rc1.d              statetab.d
+DIR_COLORS         insights-client          mke2fs.conf               rc2.d              subgid
+[ec2-user@ip-172-31-18-220 etc]$ cd /
+[ec2-user@ip-172-31-18-220 /]$
+[ec2-user@ip-172-31-18-220 /]$ ls -l
+total 24
+dr-xr-xr-x.   2 root root    6 Aug  9  2021 afs
+lrwxrwxrwx.   1 root root    7 Aug  9  2021 bin -> usr/bin
+dr-xr-xr-x.   5 root root 4096 May  6 04:37 boot
+drwxr-xr-x.  18 root root 2820 May  6 04:37 dev
+drwxr-xr-x.   2 root root    0 May  6 04:37 efi
+drwxr-xr-x.  88 root root 8192 May  6 05:39 etc
+drwxr-xr-x.   3 root root   22 May  6 04:37 home
+lrwxrwxrwx.   1 root root    7 Aug  9  2021 lib -> usr/lib
+lrwxrwxrwx.   1 root root    9 Aug  9  2021 lib64 -> usr/lib64
+drwxr-xr-x.   2 root root    6 Aug  9  2021 media
+drwxr-xr-x.   2 root root    6 Aug  9  2021 mnt
+drwxr-xr-x.   2 root root    6 Aug  9  2021 opt
+dr-xr-xr-x. 160 root root    0 May  6 04:37 proc
+dr-xr-x---.   3 root root  103 Jan 17 18:50 root
+drwxr-xr-x.  29 root root  840 May  6 04:37 run
+lrwxrwxrwx.   1 root root    8 Aug  9  2021 sbin -> usr/sbin
+drwxr-xr-x.   2 root root    6 Aug  9  2021 srv
+dr-xr-xr-x.  13 root root    0 May  6 04:37 sys
+drwxrwxrwt.  10 root root 4096 May  6 06:30 tmp
+drwxr-xr-x.  12 root root  144 Jan 17 18:50 usr
+drwxr-xr-x.  19 root root 4096 May  6 04:37 var
+[ec2-user@ip-172-31-18-220 /]$ cd /home
+[ec2-user@ip-172-31-18-220 home]$ ls
+ec2-user
+[ec2-user@ip-172-31-18-220 home]$ cd ec2-user/
+[ec2-user@ip-172-31-18-220 ~]$ ls
+badeachelgtehain  cricket  lordofrings  missionimpossible
+[ec2-user@ip-172-31-18-220 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-18-220 ~]$ cd /
+[ec2-user@ip-172-31-18-220 /]$
+[ec2-user@ip-172-31-18-220 /]$ ls
+afs  bin  boot  dev  efi  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+[ec2-user@ip-172-31-18-220 /]$ ls -l
+total 24
+dr-xr-xr-x.   2 root root    6 Aug  9  2021 afs
+lrwxrwxrwx.   1 root root    7 Aug  9  2021 bin -> usr/bin
+dr-xr-xr-x.   5 root root 4096 May  6 04:37 boot
+drwxr-xr-x.  18 root root 2820 May  6 04:37 dev
+drwxr-xr-x.   2 root root    0 May  6 04:37 efi
+drwxr-xr-x.  88 root root 8192 May  6 05:39 etc
+drwxr-xr-x.   3 root root   22 May  6 04:37 home
+lrwxrwxrwx.   1 root root    7 Aug  9  2021 lib -> usr/lib
+lrwxrwxrwx.   1 root root    9 Aug  9  2021 lib64 -> usr/lib64
+drwxr-xr-x.   2 root root    6 Aug  9  2021 media
+drwxr-xr-x.   2 root root    6 Aug  9  2021 mnt
+drwxr-xr-x.   2 root root    6 Aug  9  2021 opt
+dr-xr-xr-x. 160 root root    0 May  6 04:37 proc
+dr-xr-x---.   3 root root  103 Jan 17 18:50 root
+drwxr-xr-x.  29 root root  840 May  6 04:37 run
+lrwxrwxrwx.   1 root root    8 Aug  9  2021 sbin -> usr/sbin
+drwxr-xr-x.   2 root root    6 Aug  9  2021 srv
+dr-xr-xr-x.  13 root root    0 May  6 04:37 sys
+drwxrwxrwt.  10 root root 4096 May  6 06:48 tmp
+drwxr-xr-x.  12 root root  144 Jan 17 18:50 usr
+drwxr-xr-x.  19 root root 4096 May  6 04:37 var
+[ec2-user@ip-172-31-18-220 /]$ cd /proc
+[ec2-user@ip-172-31-18-220 proc]$ ls
+1     14   24  34    3946  430   454   532  574  650  acpi        diskstats      ioports      loadavg       partitions     sysvipc
+10    15   25  35    3982  431   455   54   575  656  bootconfig  dma            irq          locks         schedstat      thread-self
+1016  16   26  36    4     432   456   549  576  685  buddyinfo   driver         kallsyms     mdstat        scsi           timer_list
+1020  17   27  37    40    4462  457   55   577  69   bus         dynamic_debug  kcore        meminfo       self           tty
+1021  18   29  38    41    449   4577  56   58   699  cgroups     execdomains    keys         misc          slabinfo       uptime
+1022  19   3   39    42    450   4578  569  59   701  cmdline     fb             key-users    modules       softirqs       version
+11    195  30  3929  4210  4507  458   57   6    8    consoles    filesystems    kmsg         mounts        stat           vmallocinfo
+12    2    31  3936  428   451   48    571  607  81   cpuinfo     fs             kpagecgroup  mtrr          swaps          vmstat
+1291  20   32  3938  429   452   5     572  642  9    crypto      interrupts     kpagecount   net           sys            xen
+13    22   33  3945  43    453   53    573  646  953  devices     iomem          kpageflags   pagetypeinfo  sysrq-trigger  zoneinfo
+[ec2-user@ip-172-31-18-220 proc]$ cd /usr
+[ec2-user@ip-172-31-18-220 usr]$
+[ec2-user@ip-172-31-18-220 usr]$ ls
+bin  games  include  lib  lib64  libexec  local  sbin  share  src  tmp
+[ec2-user@ip-172-31-18-220 usr]$ ls -l /
+total 24
+dr-xr-xr-x.   2 root root    6 Aug  9  2021 afs
+lrwxrwxrwx.   1 root root    7 Aug  9  2021 bin -> usr/bin
+dr-xr-xr-x.   5 root root 4096 May  6 04:37 boot
+drwxr-xr-x.  18 root root 2820 May  6 04:37 dev
+drwxr-xr-x.   2 root root    0 May  6 04:37 efi
+drwxr-xr-x.  88 root root 8192 May  6 05:39 etc
+drwxr-xr-x.   3 root root   22 May  6 04:37 home
+lrwxrwxrwx.   1 root root    7 Aug  9  2021 lib -> usr/lib
+lrwxrwxrwx.   1 root root    9 Aug  9  2021 lib64 -> usr/lib64
+drwxr-xr-x.   2 root root    6 Aug  9  2021 media
+drwxr-xr-x.   2 root root    6 Aug  9  2021 mnt
+drwxr-xr-x.   2 root root    6 Aug  9  2021 opt
+dr-xr-xr-x. 160 root root    0 May  6 04:37 proc
+dr-xr-x---.   3 root root  103 Jan 17 18:50 root
+drwxr-xr-x.  29 root root  840 May  6 04:37 run
+lrwxrwxrwx.   1 root root    8 Aug  9  2021 sbin -> usr/sbin
+drwxr-xr-x.   2 root root    6 Aug  9  2021 srv
+dr-xr-xr-x.  13 root root    0 May  6 04:37 sys
+drwxrwxrwt.  10 root root 4096 May  6 07:00 tmp
+drwxr-xr-x.  12 root root  144 Jan 17 18:50 usr
+drwxr-xr-x.  19 root root 4096 May  6 04:37 var
+[ec2-user@ip-172-31-18-220 usr]$ cd
+[ec2-user@ip-172-31-18-220 ~]$
+[ec2-user@ip-172-31-18-220 ~]$ ls
+badeachelgtehain  cricket  lordofrings  missionimpossible
+[ec2-user@ip-172-31-18-220 ~]$ cat > funny.txt
+kjsaksbcksbc
+cckcnascnaksas
+cakscnascaiscn
+[ec2-user@ip-172-31-18-220 ~]$ ls
+badeachelgtehain  cricket  funny.txt  lordofrings  missionimpossible
+[ec2-user@ip-172-31-18-220 ~]$ rm funny.txt
+[ec2-user@ip-172-31-18-220 ~]$ ls
+badeachelgtehain  cricket  lordofrings  missionimpossible
+[ec2-user@ip-172-31-18-220 ~]$ man rm
+[ec2-user@ip-172-31-18-220 ~]$ rm -r  cricket
+[ec2-user@ip-172-31-18-220 ~]$ ls
+badeachelgtehain  lordofrings  missionimpossible
+[ec2-user@ip-172-31-18-220 ~]$ ls
+badeachelgtehain  lordofrings  missionimpossible
+[ec2-user@ip-172-31-18-220 ~]$ rm -r *
+[ec2-user@ip-172-31-18-220 ~]$ ls
+[ec2-user@ip-172-31-18-220 ~]$ mkdir -p joker/cockerree
+[ec2-user@ip-172-31-18-220 ~]$ ls
+joker
+[ec2-user@ip-172-31-18-220 ~]$ rm joker/
+rm: cannot remove 'joker/': Is a directory
+[ec2-user@ip-172-31-18-220 ~]$ rm -r joker/
+[ec2-user@ip-172-31-18-220 ~]$
+[ec2-user@ip-172-31-18-220 ~]$ remove directories and their contents recursively
+-bash: remove: command not found
+[ec2-user@ip-172-31-18-220 ~]$ history
+    1  pwd
+    2  mkdir zebra
+    3  mkdir zebra/peacock
+    4  touch zebra/monkey.txt
+    5  touch zebra/peacock/beautiful.txt
+    6  touch zebra/peacock/dance.txt
+    7  mkdir hacking
+    8  touch hacking/xss.txt
+    9  touch hacking/csrf.txt
+   10  mkdir hacking/ssrf
+   11  mkdir hacking/ssrf/errorbased
+   12  touch hacking/ssrf/blind.txt
+   13  mkdir bugs
+   14  mkdir bugs/SQLi
+   15  touch bugs/authzero.txt
+   16  ls -R zebra hacking bugs
+   17  rm -r *
+   18  pwd
+   19  mkdir cricket
+   20  touch cricket/allofusaredead.txt
+   21  mkdir cricket/lapataladies
+   22  touch cricket/lapataladies/12thfail.txt
+   23  mkdir lordofrings
+   24  touch lordofrings/cars.txt
+   25  mkdir lordofrings/berlin
+   26  touch lordofrings/berlin/shershah.txt
+   27  mkdir missionimpossible
+   28  mkdir missionimpossible/agenthunt
+   29  mkdir missionimpossible/spiderman
+   30  touch missionimpossible/agenthunt/avengers.txt
+   31  touch missionimpossible/spiderman/theboys.txt
+   32  mkdir badeachelgtehain
+   33  touch badeachelgtehain/evildead.txt
+   34  mkdir badeachelgtehain/k3g
+   35  mkdir badeachelgtehain/gangsofwasseypur
+   36  touch badeachelgtehain/k3g/kabhisaasbhibahuthi.txt
+   37  touch badeachelgtehain/k3g/balikavadhu.txt
+   38  pwd
+   39  cd ..
+   40  pwd
+   41  cd ..
+   42  pwd
+   43  cd ..
+   44  pwd
+   45  ls -l
+   46  cd /bin
+   47  ls
+   48  cd /
+   49  ls -l
+   50  cd /etc
+   51  ls
+   52  cd /
+   53  ls -l
+   54  cd /home
+   55  ls
+   56  cd ec2-user/
+   57  ls
+   58  pwd
+   59  cd /
+   60  ls
+   61  ls -l
+   62  cd /proc
+   63  ls
+   64  cd /usr
+   65  ls
+   66  ls -l /
+   67  cd
+   68  ls
+   69  cat > funny.txt
+   70  ls
+   71  rm funny.txt
+   72  ls
+   73  man rm
+   74  rm -r  cricket
+   75  ls
+   76  rm -r *
+   77  ls
+   78  mkdir -p joker/cockerree
+   79  ls
+   80  rm joker/
+   81  rm -r joker/
+   82  remove directories and their contents recursively
+   83  history
+[ec2-user@ip-172-31-18-220 ~]$ history

@@ -1,0 +1,39 @@
+Linux File System Hierarchy
+
+
+/  ---> It is the main path where entire file system is attached. It is also termed as root mount       point.
+
+/bin --> So all the command programs are stored in this location.
+
+/sbin --> So all the command programs are stored in this location but here the commands stored can only be executed by an admin user.
+
+/boot --> So all the necessary files required to load the OS is going to be stored here . Including the BootLoader
+
+/dev --> Here all the peripherals of the systems are displayed here for eg:- harddisk,networkcard etc.
+
+/etc --> Here , you will find all the config files of the system . 
+
+/home --> It contains all the user's home directory ( Normal Users )
+
+/lib --> It contains all the library files required by different functions with 32 bit compiler
+
+/lib64 --> It contains all the library files required by different functions  with 64 bit compiler
+
+/mnt --> It contains all the mount points and can be used to generate more mount points as needed.
+
+/opt --> To store data and see the content of the CD .
+
+/proc --> Information related to the CPU and the processes running on CPU information is available here.
+
+/root --> It is the home directory of the Admin / Root user
+
+/tmp --> It is same as windows temp directory. 
+
+/usr --> It will contain all the 3rd party apps and the documentation of commands .
+
+/var --> So here we store the files/directory which keeps on changing its content . For Eg:- Log Files
+
+
+
+
+
